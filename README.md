@@ -1,2 +1,5 @@
 # IT 490 F26
-## Git Happems
+## Git Happens
+
+Members:
+- Andy Bhokal
