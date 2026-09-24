@@ -4,3 +4,4 @@
 Members:
 - Andy Bhokal
 - Konstantinos Protogeropoulos
+- Divyakumar Barvalia
