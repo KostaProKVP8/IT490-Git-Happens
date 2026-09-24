@@ -3,3 +3,4 @@
 
 Members:
 - Andy Bhokal
+- Konstantinos Protogeropoulos
