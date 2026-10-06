@@ -29,21 +29,6 @@ require_once('rabbitMQLib.inc');
 	echo "\n\n';
 
 	echo $argv[0]. " END".PHP_EOL;
-
-
-
-
-
-        $mydb = new mysqli('100.107.243.36','testUser','12345','testdb'); // need actual db creds at some point and a .env file to keep it off of github
-
-        if ($mydb->errno != 0)
-        {
-            echo "failed to connect to database: ". $mydb->error . PHP_EOL;
-            exit(0);
-        }
-
-        echo "successfully connected to database".PHP_EOL;
-        return $mydb;
     }
 
 
