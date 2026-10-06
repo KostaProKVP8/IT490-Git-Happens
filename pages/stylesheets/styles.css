@@ -1,0 +1,29 @@
+body{
+    background-color: antiquewhite;
+    padding: 0px;
+    margin: 0px;
+    
+    /* display: flex; */
+}
+header{
+    /* margin:0;
+    padding:0; */
+    height:10vh;
+    background-color: red;
+}
+
+header h1{
+    margin:0px;
+    padding:0px;
+    font-size: 8vh;
+    padding-top: 0%;
+}
+
+.mainDiv{
+    height:80vh;
+}
+
+footer{
+    height:20vh;
+    background-color: blue;
+}

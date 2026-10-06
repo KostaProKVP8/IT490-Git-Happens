@@ -1,0 +1,11 @@
+.loginBox{
+    margin-left: 25vw;
+    background-color: yellow;
+    width: 50vw;
+    height:50vw;
+    min-width: 200px;
+}
+
+.loginBox h1{
+    color:purple;
+}
