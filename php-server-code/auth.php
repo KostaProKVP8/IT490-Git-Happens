@@ -15,16 +15,17 @@
         return $token;
     }
     
-    function checkUser(){
-        if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["userName"]) && isset($_POST["hash"])){
-            $username = $_POST["userName"]; 
-            $passwordHash = $_POST["hash"];
+    function checkUser($username, $paswordHash){
             // $query = "select userid from authentication where username==$username and password_hash==$passwordHash;"; //ignored for now until rmq connection is set...
             // $response = query($query, $db); //guaranteed response bc query function handles errors (maybe bad practice?)
 
             // return generateToken($response["userid"]);
             return generateToken(37082);
 
-        }
+    }
+    if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["userName"]) && isset($_POST["hash"])){
+        $username = $_POST["userName"]; 
+        $passwordHash = $_POST["hash"];
+        checkUser($username, $passwordHash);
     }
 ?>
