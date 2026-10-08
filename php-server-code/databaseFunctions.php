@@ -1,8 +1,12 @@
 <?php
     // code taken from mysqli example and modified
-require_once('path.inc');
-require_once('get_host_info.inc');
-require_once('rabbitMQLib.inc');
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
+
+    require_once('path.inc');
+    require_once('get_host_info.inc');
+    require_once('rabbitMQLib.inc');
  
 
    function connectDB(){ //replace with rabbitmq connection
@@ -32,7 +36,7 @@ require_once('rabbitMQLib.inc');
 		print_r($response);
 		echo "\n\n';
 	
-		echo $argv[0]. " END".PHP_EOL;
+		echo $argv[0]. " END" .PHP_EOL;
     }
 
     $db = connectDB()
