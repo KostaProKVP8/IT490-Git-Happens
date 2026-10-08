@@ -11,7 +11,7 @@ function connectDB() {
 function query($query, $db) {
     // $db is the rabbitMQClient returned by connectDB()
     $request = array();
-    $request['type']     = "Login";
+    $request['type']     = "login";
     $request['username'] = "webUser";
     $request['password'] = "Web-Bet4-Qp38";
     $request['message']  = $query;
