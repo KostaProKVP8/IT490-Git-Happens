@@ -39,7 +39,7 @@ async function register() {
                 console.log("Error:", xHttpReq.status);
             }
         };
-        xHttpReq.send(`userName=${encodeURIComponent(userName)}&hash=${encodeURIComponent(passwordHash)}&email=${encodeURIComponent(email)}`);
+        xHttpReq.send(`userName=${encodeURIComponent(userName)}&hash=${encodeURIComponent(passwordHash)}&email=${encodeURIComponent(email)}&method=${encodeURIComponent("register")}`);
         // console.log(`userName=${encodeURIComponent(userName)}&hash=${encodeURIComponent(passwordHash)}&email=${encodeURIComponent(email)}`);
 
     }

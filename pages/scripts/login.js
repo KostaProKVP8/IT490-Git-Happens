@@ -35,7 +35,7 @@ async function login(){
             console.log("Error:", xHttpReq.status);
         }
     };
-    xHttpReq.send(`userName=${encodeURIComponent(userName)}&hash=${encodeURIComponent(passwordHash)}`);
+    xHttpReq.send(`userName=${encodeURIComponent(userName)}&hash=${encodeURIComponent(passwordHash)}&method=${encodeURIComponent("login")}`);
     // try{
     //     const response = await fetch(endpointUrl);
     //     if (!response.ok){
