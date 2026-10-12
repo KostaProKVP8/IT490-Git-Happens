@@ -1,5 +1,7 @@
 # IT 490 F26
-## Git Happens
+## SideQuest - A sports betting site
+
+Group: Git Happens
 
 Members:
 - Andy Bhokal
