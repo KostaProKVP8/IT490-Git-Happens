@@ -20,7 +20,8 @@
             $query = "use authentication; select userid from users where username==$username and password_hash==$passwordHash;"; //ignored for now until rmq connection is set...
             $response = query($query, $db); //guaranteed response bc query function handles errors (maybe bad practice?)
 
-            return generateToken($response["userid"]);
+            return $response
+            // return generateToken($response["userid"]);
             // return generateToken(37082);
 
     }

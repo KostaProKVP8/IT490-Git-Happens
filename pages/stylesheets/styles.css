@@ -1,15 +1,35 @@
+@font-face{
+    font-family: 'Tango Sans';
+    src: url('fonts/TangoSans.ttf');
+}
+
+@font-face{
+    font-family: 'Matcha World';
+    src: url('fonts/Matcha\ World.ttf');
+}
+
+:root{
+    --main-background-color: #DBFCFF;
+    --secondary-background-color: #7f96FF;
+    --primary-accent-color: #E56399;
+    --secondary-accent-color: #310D3A;
+    --tertiary-accent-color: #A6CFD5;
+}
+
+
 body{
-    background-color: antiquewhite;
+    background-color: var(--main-background-color);
     padding: 0px;
     margin: 0px;
-    
+    font-family: 'Tango Sans';
     /* display: flex; */
 }
 header{
-    /* margin:0;
-    padding:0; */
-    height:10vh;
-    background-color: red;
+    margin:0;
+    padding:0;
+    height:80vw;
+    max-height: 750px;
+    background-color: var(--secondary-background-color);
 }
 
 header h1{
