@@ -4,6 +4,7 @@ require_once('path.inc');
 require_once('get_host_info.inc');
 require_once('rabbitMQLib.inc');
 require_once('auth.inc');
+require_once('creds.inc');
 
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 
@@ -11,7 +12,7 @@ function doLogin($username,$password)
 {
     global $db;
 
-    $stmt = $db->prepare("SELECT userid, password_hash, is_active FROM users WHERE username = ?");
+    $stmt = $db->prepare("SELECT userid, password_hash, is_active FROM users WHERE username = ?;");
     $stmt->bind_param('s', $username);
     $stmt->execute();
     $user = $stmt->get_result()->fetch_assoc();
@@ -104,6 +105,12 @@ function requestProcessor($request)
 }
 
 $server = new rabbitMQServer("testRabbitMQ.ini","testServer");
+$db = new mysqli($dbAddress,$dbUsername,$dbPassword,"authentication");
+
+if ($db -> connect_errno) {
+  echo "Failed to connect to MySQL: " . $db -> connect_error;
+  exit();
+}
 
 echo "testRabbitMQServer BEGIN".PHP_EOL;
 $server->process_requests('requestProcessor');
