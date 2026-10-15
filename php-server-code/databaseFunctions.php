@@ -10,11 +10,27 @@ function connectDB() {
 
 function query($query, $db, $type) {
     // $db is the rabbitMQClient returned by connectDB()
+
+    
     $request = array();
     $request['type']     = $type;
     $request['username'] = "webUser";
     $request['password'] = "Web-Bet4-Qp38";
-    $request['message']  = $query;
+    switch($type){
+        case "login":
+            $request['user'] = $query[0];
+            $request['passwordHash'] = $query[1];
+
+        case "register":
+            $request['user'] = $query[0];
+            $request['email'] = $query[1];
+            $request['passwordHash'] = $query[2];
+
+        case "validate_session":
+            $request['sessionId'] = $query[0];
+
+    }
+    // $request['message']  = $query;
 
     $response = $db->send_request($request);
 
