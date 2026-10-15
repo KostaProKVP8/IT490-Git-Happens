@@ -3,8 +3,21 @@
 require_once('path.inc');
 require_once('get_host_info.inc');
 require_once('rabbitMQLib.inc');
-require_once('auth.inc');
+// require_once('auth.inc');
 require_once('creds.inc');
+
+  function generateToken($userid) {
+    $token = 0;
+    $epoch = time();
+    var_dump($token);
+    
+    $token = 10*$epoch+$userid;
+
+    $token = base64_encode($token);
+    var_dump($token);
+    return $token;
+  }
+
 
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 
