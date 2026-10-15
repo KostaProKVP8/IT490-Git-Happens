@@ -18,16 +18,16 @@ function query($query, $db, $type) {
     $request['password'] = "Web-Bet4-Qp38";
     switch($type){
         case "login":
-            $request['user'] = $query[0];
-            $request['passwordHash'] = $query[1];
+            $request['user'] = $query['user'];
+            $request['passwordHash'] = $query['passwordHash'];
 
         case "register":
-            $request['user'] = $query[0];
-            $request['email'] = $query[1];
-            $request['passwordHash'] = $query[2];
+            $request['user'] = $query['user'];
+            $request['email'] = $query['email'];
+            $request['passwordHash'] = $query['passwordHash'];
 
         case "validate_session":
-            $request['sessionId'] = $query[0];
+            $request['sessionId'] = $query['sessionId'];
 
     }
     // $request['message']  = $query;

@@ -18,7 +18,7 @@
     function checkUser($username, $passwordHash){
             global $db;
             // $query = "use authentication; select userid from users where username==$username and password_hash==$passwordHash;"; //ignored for now until rmq connection is set...
-            $query = array($username,$passwordHash);
+            $query = array("user" => $username,"passwordHash" => $passwordHash);
             $response = query($query, $db, "login"); //guaranteed response bc query function handles errors (maybe bad practice?)
 
             return $response;
@@ -30,7 +30,7 @@
     function addUser($username, $passwordHash, $email){
             global $db;
             // $query = "use authentication; INSERT INTO users (username, email, password_hash) VALUES ('$username', '$email', '$passwordHash');"; //ignored for now until rmq connection is set...
-            $query = array($username,$email,$passwordHash);
+            $query = array("user" => $username,"email" => $email,"passwordHash" => $passwordHash);
             $response = query($query, $db, "register"); //guaranteed response bc query function handles errors (maybe bad practice?)
 
             return generateToken($response["userid"]);

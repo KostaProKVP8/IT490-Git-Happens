@@ -3,7 +3,7 @@
     function validateToken($token){
             global $db;
             // $query = "use authentication; select userid from users where username==$username and password_hash==$passwordHash;"; //ignored for now until rmq connection is set...
-            $query=array($token);
+            $query=array("sessionId" => $token);
             $response = query($query, $db,"validate_session"); //guaranteed response bc query function handles errors (maybe bad practice?)
 
             return $response;
