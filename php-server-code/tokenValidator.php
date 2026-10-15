@@ -6,7 +6,7 @@
             $query=array("sessionId" => $token);
             $response = query($query, $db,"validate_session"); //guaranteed response bc query function handles errors (maybe bad practice?)
 
-            return $response;
+            return  json_encode($response);
             // return generateToken(37082);
 
     }

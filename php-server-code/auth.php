@@ -7,7 +7,7 @@
             $query = array("user" => $username,"passwordHash" => $passwordHash);
             $response = query($query, $db, "login"); //guaranteed response bc query function handles errors (maybe bad practice?)
 
-            return $response;
+            return json_encode($response);
             // return generateToken($response["userid"]);
             // return generateToken(37082);
 
@@ -19,7 +19,7 @@
             $query = array("user" => $username,"email" => $email,"passwordHash" => $passwordHash);
             $response = query($query, $db, "register"); //guaranteed response bc query function handles errors (maybe bad practice?)
 
-            return $response;
+            return  json_encode($response);
     }
     if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["userName"]) && isset($_POST["hash"]) &&isset($_POST["method"]) && $_POST["method"]=="login"){
         $username = $_POST["userName"]; 
