@@ -20,14 +20,17 @@ function query($query, $db, $type) {
         case "login":
             $request['user'] = $query['user'];
             $request['passwordHash'] = $query['passwordHash'];
+            break;
 
         case "register":
             $request['user'] = $query['user'];
             $request['email'] = $query['email'];
             $request['passwordHash'] = $query['passwordHash'];
+            break;
 
         case "validate_session":
             $request['sessionId'] = $query['sessionId'];
+            break;
 
     }
     // $request['message']  = $query;
