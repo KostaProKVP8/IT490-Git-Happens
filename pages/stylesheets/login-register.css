@@ -9,6 +9,8 @@
     min-width: 200px;
     border-radius: 5vw;
 
+    font-size: 2vw;
+
 }
 
 .loginBox h1{
@@ -16,6 +18,16 @@
     font-size: 4vw;
     color: var(--primary-accent-color);
     text-shadow: 0.25vw 0.25vw var(--secondary-accent-color);
+}
+
+.loginBox a{
+    color: var(--primary-accent-color);
+    text-shadow: 0.25vw 0.25vw var(--secondary-accent-color);
+}
+
+.loginBox a:hover{
+    color: var(--secondary-accent-color);
+    text-shadow: 0.25vw 0.25vw var(--primary-accent-color);
 }
 
 .button{

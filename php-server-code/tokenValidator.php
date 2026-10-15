@@ -10,7 +10,7 @@
             // return generateToken(37082);
 
     }
-    if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["token"]) && isset($_POST["method"]) && $_POST["method"]=="login"){
+    if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["token"]) && isset($_POST["method"]) && $_POST["method"]=="validate"){
         $token = $_POST["token"]
         validateToken($token);
     }

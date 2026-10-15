@@ -1,19 +1,5 @@
-function _hash(key){
-    let hashStr = "";
-    key.split("").forEach((char, index) => {
-        // console.log(`${char} ${index}`);
-        hashStr+=key.charCodeAt(index);
-        hashStr+=index;
-    });
-    // console.log(hashStr);
-    hashStr = hashStr % 490003;
-    // console.log(hashStr);
-    hashStr = window.btoa(hashStr);
-    // console.log(hashStr);
-
-    return hashStr;
-}
-
+import { _hash, validateInput } from "./Utility";
+import { saveSession } from "./session";
 
 async function register() {
     console.log("In register");
@@ -22,6 +8,15 @@ async function register() {
     const enteredPassword = document.getElementById("registerPassword").value;
     const confirmPassword = document.getElementById("registerPasswordConfirm").value;
 
+    if(!validateInput(userName,"user")){
+        alert("You done goofed");
+    }
+    if(!validateInput(enteredPassword,"password")){
+        alert("You done goofed");
+    }
+    if(!validateInput(email,"email")){
+        alert("You done goofed");
+    }
     if(enteredPassword != confirmPassword){
         alert("passwords do not match!");
         return;
@@ -34,6 +29,15 @@ async function register() {
         xHttpReq.onreadystatechange = function(){
             if( xHttpReq.status == 200){
                 console.log(xHttpReq.responseText);
+                var response = xHttpReq.responseText;
+                if( response.returnCode == 1){
+                    // sessionStorage.setItem("sessionId",response.sessionId);
+                    saveSession(response.sessionId);
+                    window.location.href="../landing.html";
+                }
+                else{
+                    console.error(response.message);  
+                }
             }
             else{
                 console.log("Error:", xHttpReq.status);
