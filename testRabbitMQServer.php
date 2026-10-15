@@ -49,7 +49,7 @@ function doLogin($username,$password)
             session_key = VALUES(session_key),
             expires_at = VALUES(expires_at)"
     );
-    $stmt->bind_param('is', $user['userid'], $sessionHash);
+    $stmt->bind_param('is', $userId, $sessionHash);
     $stmt->execute();
 
     return array("returnCode" => 1, "message" => "Login successful", "sessionId" => $sessionKey);
@@ -80,7 +80,7 @@ function doRegister($username, $email, $password_hash){
             session_key = VALUES(session_key),
             expires_at = VALUES(expires_at)"
     );
-    $stmt->bind_param('is', $user['userid'], $sessionHash);
+    $stmt->bind_param('is', $userId, $sessionHash);
     $stmt->execute();
 
     return array("returnCode" => 1, "message" => "Registration successful", "sessionId" => $sessionKey);
