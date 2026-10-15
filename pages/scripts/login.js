@@ -1,5 +1,5 @@
-import { _hash, validateInput } from "./Utility";
-import { getSession, saveSession } from "./session";
+import { _hash, validateInput } from "./Utility.js";
+import { getSession, saveSession } from "./session.js";
 
 async function login(){
     // const endpointUrl = "127.0.0.1"; 
@@ -15,23 +15,29 @@ async function login(){
     if(!validateInput(enteredPassword,"password")){
         alert("You done goofed");
     }
-    passwordHash = _hash(enteredPassword);
+    var passwordHash = _hash(enteredPassword);
 
     var xHttpReq = new XMLHttpRequest();
 
     xHttpReq.open("POST","../../php-server-code/auth.php",true);
     xHttpReq.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+   console.log("RabbitMQ can go fuck itself"); 
     xHttpReq.onreadystatechange = function(){
-        if( xHttpReq.status == 200){
+        if(xHttpReq.readyState !== XMLHttpRequest.DONE){
+              return;
+        }
+
+        if(xHttpReq.status == 200){
             console.log(xHttpReq.responseText);
-            var response = xHttpReq.responseText;
+            const response = JSON.parse(xHttpReq.responseText);
+	    console.log(response);
             if( response.returnCode == 1){
                 saveSession(response.sessionId);
                 console.log(getSession());
                 window.location.href = "../landing.html";
             }
             else{
-                console.error(response.message);  
+                console.error(response);  
             }
         }
         else{
