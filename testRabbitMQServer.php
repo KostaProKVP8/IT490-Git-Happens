@@ -17,6 +17,8 @@ function doLogin($username,$password)
     $stmt->execute();
     $user = $stmt->get_result()->fetch_assoc();
 
+    var_dump(user);
+    var_dump($password,$user['password_hash']);
     if (!$user || !$user['is_active'] || !password_verify($password, $user['password_hash'])) {
         return array("returnCode" => 0, "message" => "Invalid username or password");
     }
