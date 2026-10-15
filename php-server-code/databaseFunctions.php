@@ -8,10 +8,10 @@ function connectDB() {
     return new rabbitMQClient("testRabbitMQ.ini", "testServer");
 }
 
-function query($query, $db) {
+function query($query, $db, $type) {
     // $db is the rabbitMQClient returned by connectDB()
     $request = array();
-    $request['type']     = "login";
+    $request['type']     = $type;
     $request['username'] = "webUser";
     $request['password'] = "Web-Bet4-Qp38";
     $request['message']  = $query;
