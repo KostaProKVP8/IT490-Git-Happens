@@ -30,7 +30,7 @@ async function login(){
         if(xHttpReq.status == 200){
             console.log(xHttpReq.responseText);
             const response = JSON.parse(xHttpReq.responseText);
-	    console.log(response);
+	        console.log(response);
             if( response.returnCode == 1){
                 saveSession(response.sessionId);
                 console.log(getSession());
@@ -45,6 +45,21 @@ async function login(){
         }
     }
     xHttpReq.send(`userName=${encodeURIComponent(userName)}&hash=${encodeURIComponent(passwordHash)}&method=${encodeURIComponent("login")}`);
+
+            // var responseText = '{"returnCode": 1, "message":"Login Successful", "sessionId":"MTc5MjA4NDE3NzU="}';
+            // var responseText = '{"returnCode":1,"message":"Login successful","sessionId":"MTc5MjA5MjI0OTE="}';
+            console.log(responseText);
+            const response = JSON.parse(responseText);
+	        console.log(response);
+            if( response.returnCode == 1){
+                saveSession(response.sessionId);
+                console.log(getSession());
+                window.location.href = "../../pages/landing.html";
+            }
+            else{
+                console.error(response);  
+                window.location.href = "../../pages/error.html"
+            }
 }
 
 document.getElementById("loginSubmit").addEventListener("click",login);

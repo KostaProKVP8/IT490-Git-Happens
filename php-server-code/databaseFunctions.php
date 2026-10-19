@@ -33,9 +33,11 @@ function query($query, $db, $type) {
             break;
 
     }
-    // $request['message']  = $query;
+    $request['message']  = $query;
 
     $response = $db->send_request($request);
+    
+    // $response = ""
 
     echo "client received response: " . PHP_EOL;
     print_r($response);
