@@ -39,9 +39,9 @@ function query($query, $db, $type) {
     
     // $response = ""
 
-    echo "client received response: " . PHP_EOL;
-    print_r($response);
-    echo "\n\n";
+    // echo "client received response: " . PHP_EOL;
+    // print_r($response);
+    // echo "\n\n";
 
     return $response;
 }
