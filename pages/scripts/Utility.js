@@ -45,7 +45,7 @@ export function validateInput(inpt, type){
        else if(inpt.search(/[0-9]/) == -1){
             return false;
        }
-       else if(inpt.search(/[!@#$^&*().]/) == -1){
+       else if(inpt.search(/[!@#$^&*().-]/) == -1){
             return false;
        }
        else{

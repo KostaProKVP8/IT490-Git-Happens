@@ -13,7 +13,7 @@ async function login(){
         alert("You done goofed");
     }
     if(!validateInput(enteredPassword,"password")){
-        alert("You done goofed");
+        alert("You done goofed, allowed special characters are any of the following: !@#$^&*().-");
     }
     var passwordHash = _hash(enteredPassword);
 
