@@ -30,7 +30,7 @@ function doLogin($username,$password)
     $stmt->execute();
     $user = $stmt->get_result()->fetch_assoc();
 
-    // var_dump($user);
+    var_dump($user);
     // var_dump($password,$user['password_hash']);
     if (!$user || !$user['is_active'] || !password_verify($password, $user['password_hash'])) {
         return array("returnCode" => 0, "message" => "Invalid username or password");
@@ -61,7 +61,7 @@ function doRegister($username, $email, $password_hash){
 
     $stmt = $db->prepare("INSERT INTO users (username, email, password_hash) VALUES (?, ?, ?);");
     $stmt->bind_param('sss', $username, $email, $password_hash);
-    echo($stmt);
+    // echo($stmt);
     $stmt->execute();
     $userId = $db->insert_id;
 
@@ -82,7 +82,7 @@ function doRegister($username, $email, $password_hash){
             expires_at = VALUES(expires_at)"
     );
     $stmt->bind_param('is', $userId, $sessionHash);
-    echo($stmt);
+    // echo($stmt);
     $stmt->execute();
 
     return array("returnCode" => 1, "message" => "Registration successful", "sessionId" => $sessionKey);
