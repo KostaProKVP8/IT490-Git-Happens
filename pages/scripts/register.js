@@ -13,11 +13,11 @@ async function register() {
         return;
     }
     if(!validateInput(enteredPassword,"password")){
-        alert("You done goofed");
+        alert("You done goofed, allowed special characters are any of the following: !@#$^&*().-");
         return;
     }
     if(!validateInput(email,"email")){
-        alert("You done goofed");
+        alert("You done goofed, That's not an email!");
         return;
     }
     if(enteredPassword != confirmPassword){

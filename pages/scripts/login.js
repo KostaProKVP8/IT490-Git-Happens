@@ -13,7 +13,7 @@ async function login(){
         alert("You done goofed");
     }
     if(!validateInput(enteredPassword,"password")){
-        alert("You done goofed, allowed special characters are any of the following: !@#$^&*().-");
+        alert("You done goofed");
     }
     var passwordHash = _hash(enteredPassword);
 
@@ -38,7 +38,8 @@ async function login(){
             }
             else{
                 console.error(response);  
-                window.location.href = "../../pages/error.html";
+                alert("Incorrect Username or Password, L bozo");
+                // window.location.href = "../error.html";
 
             }
         }
