@@ -56,6 +56,6 @@ export function validateInput(inpt, type){
 
     if(type == "email"){
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; //usde regex test bc it's a guaranteed format
-        return emailRegex.test(email);
+        return emailRegex.test(inpt);
     }
 }
