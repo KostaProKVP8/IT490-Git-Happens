@@ -10,12 +10,15 @@ async function register() {
 
     if(!validateInput(userName,"user")){
         alert("You done goofed");
+        return;
     }
     if(!validateInput(enteredPassword,"password")){
         alert("You done goofed");
+        return;
     }
     if(!validateInput(email,"email")){
         alert("You done goofed");
+        return;
     }
     if(enteredPassword != confirmPassword){
         alert("passwords do not match!");
