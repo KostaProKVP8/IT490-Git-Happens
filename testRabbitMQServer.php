@@ -59,6 +59,16 @@ function doLogin($username,$password)
 function doRegister($username, $email, $password_hash){
   global $db;
 
+    $stmt = $db->prepare("SELECT * FROM users WHERE username=?;");
+    $stmt->bind_param('s',$username);
+    $stmt->execute();
+
+    $res = $stmt->get_result()->fetch_assoc();
+
+    if(!is_null($res['userid'])){
+      return array("returnCode" => 0, "message" => "User Already Exists");
+    }
+
     $stmt = $db->prepare("INSERT INTO users (username, email, password_hash) VALUES (?, ?, ?);");
     $stmt->bind_param('sss', $username, $email, $password_hash);
     // echo($stmt);
