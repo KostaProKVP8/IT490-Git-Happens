@@ -1,9 +1,9 @@
-import { getSession } from "./session.js";
+import { clearSession, getSession } from "./session.js";
 
 async function checkToken(){
     var sessionId = getSession();
-    if (sessionId === Null){
-        window.location.href = "../error.html"
+    if (!sessionId){
+        window.location.replace("../error.html");
     } 
 
     var xHttpReq = new XMLHttpRequest();
@@ -18,15 +18,17 @@ async function checkToken(){
                 sessionStorage.setItem("sessionId",response.sessionId);
             }
             else{
+                clearSession();
                 console.error(response.message);  
-                window.location.href = "../error.html"
+                window.location.replace("../error.html");
+
             }
         }
         else{
             console.log(xHttpReq.status);
         }
     }
-    xHttpReq.send(`token=${encodeURIComponent(sessionid)}&method=${encodeURIComponent("validate")}`);
+    xHttpReq.send(`token=${encodeURIComponent(sessionId)}&method=${encodeURIComponent("validate")}`);
 
 
 
