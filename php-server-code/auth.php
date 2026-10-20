@@ -24,13 +24,13 @@
     if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["userName"]) && isset($_POST["hash"]) &&isset($_POST["method"]) && $_POST["method"]=="login"){
         $username = $_POST["userName"]; 
         $passwordHash = $_POST["hash"];
-        checkUser($username, $passwordHash);
+        echo(checkUser($username, $passwordHash));
     }
 
     if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["userName"]) && isset($_POST["hash"]) &&isset($_POST["email"]) &&isset($_POST["method"]) && $_POST["method"]=="register"){
         $username = $_POST["userName"]; 
         $passwordHash = $_POST["hash"];
         $email = $_POST["email"];
-        addUser($username, $passwordHash,$email);
+        echo(addUser($username, $passwordHash,$email));
     }
 ?>
