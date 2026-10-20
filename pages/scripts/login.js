@@ -27,9 +27,9 @@ async function login(){
               return;
         }
 
-        if(xHttpReq.status == 200){
-            console.log(xHttpReq.responseText);
-            const response = JSON.parse(xHttpReq.responseText);
+        if(xHttpReq.status == 200 && xHttpReq.readyState === 4){
+            console.log(xHttpReq.response);
+            const response = JSON.parse(xHttpReq.response);
 	        console.log(response);
             if( response.returnCode == 1){
                 saveSession(response.sessionId);
