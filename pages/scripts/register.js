@@ -41,6 +41,7 @@ async function register() {
                 }
                 else{
                     console.error(response.message);  
+                    alert(response.message);
                 }
             }
             else{
