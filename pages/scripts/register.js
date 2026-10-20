@@ -28,8 +28,8 @@ async function register() {
         xHttpReq.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
         xHttpReq.onreadystatechange = function(){
             if( xHttpReq.status == 200){
-                console.log(xHttpReq.responseText);
-                var response = JSON.parse(xHttpReq.responseText);
+                console.log(xHttpReq.response);
+                var response = JSON.parse(xHttpReq.response);
                 console.log(response);
                 if( response.returnCode == 1){
                     // sessionStorage.setItem("sessionId",response.sessionId);
