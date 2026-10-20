@@ -29,7 +29,7 @@ async function register() {
         xHttpReq.onreadystatechange = function(){
             if( xHttpReq.status == 200){
                 console.log(xHttpReq.responseText);
-                var response = xHttpReq.responseText;
+                var response = JSON.parse(xHttpReq.responseText);
                 if( response.returnCode == 1){
                     // sessionStorage.setItem("sessionId",response.sessionId);
                     saveSession(response.sessionId);
