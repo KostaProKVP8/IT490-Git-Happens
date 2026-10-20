@@ -21,7 +21,7 @@ async function login(){
 
     xHttpReq.open("POST","../../php-server-code/auth.php",true);
     xHttpReq.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
-   console.log("RabbitMQ can go fuck itself"); 
+//    console.log("RabbitMQ can go fuck itself"); 
     xHttpReq.onreadystatechange = function(){
         if(xHttpReq.readyState !== XMLHttpRequest.DONE){
               return;
@@ -38,6 +38,8 @@ async function login(){
             }
             else{
                 console.error(response);  
+                window.location.href = "../../pages/error.html";
+
             }
         }
         else{
@@ -48,18 +50,17 @@ async function login(){
 
             // var responseText = '{"returnCode": 1, "message":"Login Successful", "sessionId":"MTc5MjA4NDE3NzU="}';
             // var responseText = '{"returnCode":1,"message":"Login successful","sessionId":"MTc5MjA5MjI0OTE="}';
-            console.log(responseText);
-            const response = JSON.parse(responseText);
-	        console.log(response);
-            if( response.returnCode == 1){
-                saveSession(response.sessionId);
-                console.log(getSession());
-                window.location.href = "../../pages/landing.html";
-            }
-            else{
-                console.error(response);  
-                window.location.href = "../../pages/error.html"
-            }
+            // console.log(responseText);
+            // const response = JSON.parse(responseText);
+	        // console.log(response);
+            // if( response.returnCode == 1){
+            //     saveSession(response.sessionId);
+            //     console.log(getSession());
+            //     window.location.href = "../../pages/landing.html";
+            // }
+            // else{
+            //     console.error(response);  
+            // }
 }
 
 document.getElementById("loginSubmit").addEventListener("click",login);
