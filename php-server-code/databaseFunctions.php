@@ -8,19 +8,40 @@ function connectDB() {
     return new rabbitMQClient("testRabbitMQ.ini", "testServer");
 }
 
-function query($query, $db) {
+function query($query, $db, $type) {
     // $db is the rabbitMQClient returned by connectDB()
+
+    
     $request = array();
-    $request['type']     = "login";
+    $request['type']     = $type;
     $request['username'] = "webUser";
     $request['password'] = "Web-Bet4-Qp38";
+    switch($type){
+        case "login":
+            $request['user'] = $query['user'];
+            $request['passwordHash'] = $query['passwordHash'];
+            break;
+
+        case "register":
+            $request['user'] = $query['user'];
+            $request['email'] = $query['email'];
+            $request['passwordHash'] = $query['passwordHash'];
+            break;
+
+        case "validate_session":
+            $request['sessionId'] = $query['sessionId'];
+            break;
+
+    }
     $request['message']  = $query;
 
     $response = $db->send_request($request);
+    
+    // $response = ""
 
-    echo "client received response: " . PHP_EOL;
-    print_r($response);
-    echo "\n\n";
+    // echo "client received response: " . PHP_EOL;
+    // print_r($response);
+    // echo "\n\n";
 
     return $response;
 }

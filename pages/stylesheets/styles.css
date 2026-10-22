@@ -1,29 +1,71 @@
+@font-face{
+    font-family: 'Tango Sans';
+    src: url('fonts/TangoSans.ttf');
+}
+
+@font-face{
+    font-family: 'Matcha World';
+    src: url('fonts/Matcha\ World.ttf');
+}
+
+:root{
+    --main-background-color: #DBFCFF;
+    --secondary-background-color: #7f96FF;
+    --primary-accent-color: #E56399;
+    --secondary-accent-color: #310D3A;
+    --tertiary-accent-color: #A6CFD5;
+}
+
+
 body{
-    background-color: antiquewhite;
+    background-color: var(--secondary-background-color);
     padding: 0px;
     margin: 0px;
-    
+    font-family: 'Tango Sans';
     /* display: flex; */
 }
+
 header{
-    /* margin:0;
-    padding:0; */
-    height:10vh;
-    background-color: red;
+    margin:0;
+    padding:0;
+    height:20vw;
+    max-height: 150px;
+    background-color: var(--secondary-background-color);
+}
+
+header a{
+    text-decoration: none;
 }
 
 header h1{
     margin:0px;
     padding:0px;
     font-size: 8vh;
-    padding-top: 0%;
+    padding-top: 3vh;
+    padding-left: 2vw;
+    color: var(--primary-accent-color);
+    text-shadow: 0.5vw 0.5vw var(--secondary-accent-color);
+    font-family: 'Matcha World';
+}
+
+header h1:hover{
+    color: var(--secondary-accent-color);
+    text-shadow: 0.5vw 0.5vw var(--primary-accent-color);
+}
+
+
+.headerShadow{
+    background-color: var(--tertiary-accent-color);
+    color: var(--tertiary-accent-color);
 }
 
 .mainDiv{
+    background-color: var(--main-background-color);
     height:80vh;
 }
 
 footer{
+    margin-top:3vh;
     height:20vh;
-    background-color: blue;
+    background-color: var(--secondary-background-color);
 }

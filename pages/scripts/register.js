@@ -1,19 +1,5 @@
-function _hash(key){
-    let hashStr = "";
-    key.split("").forEach((char, index) => {
-        // console.log(`${char} ${index}`);
-        hashStr+=key.charCodeAt(index);
-        hashStr+=index;
-    });
-    // console.log(hashStr);
-    hashStr = hashStr % 490003;
-    // console.log(hashStr);
-    hashStr = window.btoa(hashStr);
-    // console.log(hashStr);
-
-    return hashStr;
-}
-
+import { _hash, validateInput } from "./Utility.js";
+import { saveSession } from "./session.js";
 
 async function register() {
     console.log("In register");
@@ -22,6 +8,18 @@ async function register() {
     const enteredPassword = document.getElementById("registerPassword").value;
     const confirmPassword = document.getElementById("registerPasswordConfirm").value;
 
+    if(!validateInput(userName,"user")){
+        alert("You done goofed");
+        return;
+    }
+    if(!validateInput(enteredPassword,"password")){
+        alert("You done goofed, allowed special characters are any of the following: !@#$^&*().-");
+        return;
+    }
+    if(!validateInput(email,"email")){
+        alert("You done goofed, That's not an email!");
+        return;
+    }
     if(enteredPassword != confirmPassword){
         alert("passwords do not match!");
         return;
@@ -32,8 +30,19 @@ async function register() {
         xHttpReq.open("POST","../php-server-code/auth.php",true);
         xHttpReq.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
         xHttpReq.onreadystatechange = function(){
-            if( xHttpReq.status == 200){
-                console.log(xHttpReq.responseText);
+            if( xHttpReq.status == 200 && xHttpReq.readyState === 4){
+                console.log(xHttpReq.response);
+                var response = JSON.parse(xHttpReq.response);
+                console.log(response);
+                if( response.returnCode == 1){
+                    // sessionStorage.setItem("sessionId",response.sessionId);
+                    saveSession(response.sessionId);
+                    window.location.href="../landing.html";
+                }
+                else{
+                    console.error(response.message);  
+                    alert(response.message);
+                }
             }
             else{
                 console.log("Error:", xHttpReq.status);
