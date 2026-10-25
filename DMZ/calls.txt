@@ -2,11 +2,11 @@
 
  http://api-web.nhle.com
 
-#player info
+#player (skaters) leaders 
 
-curl -L -X GET "http://api-web.nhle.com/v1/skater-stats-leaders/current?categories=goals&limit=5"
+curl -L -X GET "http://api-web.nhle.com/v1/skater-stats-leaders/current"
 
-#team info (stangdings)
+#team info (standings)
 curl -L -X GET "http://api-web.nhle.com/v1/standings/now"
 
 #all teams
