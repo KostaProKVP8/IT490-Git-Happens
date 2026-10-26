@@ -498,31 +498,6 @@
       "birthCountry": "SWE"
     },
     {
-      "id": 8481525,
-      "headshot": "https://assets.nhle.com/mugs/nhl/20262027/NYR/8481525.png",
-      "firstName": {
-        "default": "Matthew"
-      },
-      "lastName": {
-        "default": "Robertson"
-      },
-      "sweaterNumber": 29,
-      "positionCode": "D",
-      "shootsCatches": "L",
-      "heightInInches": 76,
-      "weightInPounds": 218,
-      "heightInCentimeters": 193,
-      "weightInKilograms": 99,
-      "birthDate": "2001-03-09",
-      "birthCity": {
-        "default": "Edmonton"
-      },
-      "birthCountry": "CAN",
-      "birthStateProvince": {
-        "default": "AB"
-      }
-    },
-    {
       "id": 8482073,
       "headshot": "https://assets.nhle.com/mugs/nhl/20262027/NYR/8482073.png",
       "firstName": {
@@ -618,31 +593,6 @@
         "sv": "Björneborg"
       },
       "birthCountry": "FIN"
-    },
-    {
-      "id": 8477484,
-      "headshot": "https://assets.nhle.com/mugs/nhl/20262027/NYR/8477484.png",
-      "firstName": {
-        "default": "Spencer"
-      },
-      "lastName": {
-        "default": "Martin"
-      },
-      "sweaterNumber": 41,
-      "positionCode": "G",
-      "shootsCatches": "L",
-      "heightInInches": 75,
-      "weightInPounds": 190,
-      "heightInCentimeters": 191,
-      "weightInKilograms": 86,
-      "birthDate": "1995-06-08",
-      "birthCity": {
-        "default": "Oakville"
-      },
-      "birthCountry": "CAN",
-      "birthStateProvince": {
-        "default": "ON"
-      }
     },
     {
       "id": 8473503,

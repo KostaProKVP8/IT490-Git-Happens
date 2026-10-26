@@ -14,3 +14,7 @@ curl -L -X GET "https://api.nhle.com/stats/rest/en/team"
 
 #players on team
 curl -L GET "http://api-web.nhle.com/v1/roster/{team}/current"
+
+#score for a specified date
+
+curl -L -X GET "api-web.nhle.com/v1/score/2026-MM-DD"

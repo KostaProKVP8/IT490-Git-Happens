@@ -176,31 +176,6 @@
       }
     },
     {
-      "id": 8482953,
-      "headshot": "https://assets.nhle.com/mugs/nhl/20262027/COL/8482953.png",
-      "firstName": {
-        "default": "Taylor"
-      },
-      "lastName": {
-        "default": "Makar"
-      },
-      "sweaterNumber": 16,
-      "positionCode": "L",
-      "shootsCatches": "L",
-      "heightInInches": 75,
-      "weightInPounds": 190,
-      "heightInCentimeters": 191,
-      "weightInKilograms": 86,
-      "birthDate": "2001-03-13",
-      "birthCity": {
-        "default": "Calgary"
-      },
-      "birthCountry": "CAN",
-      "birthStateProvince": {
-        "default": "AB"
-      }
-    },
-    {
       "id": 8480039,
       "headshot": "https://assets.nhle.com/mugs/nhl/20262027/COL/8480039.png",
       "firstName": {

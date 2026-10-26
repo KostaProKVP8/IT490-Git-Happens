@@ -439,31 +439,6 @@
       "birthCountry": "CHE"
     },
     {
-      "id": 8477335,
-      "headshot": "https://assets.nhle.com/mugs/nhl/20262027/DAL/8477335.png",
-      "firstName": {
-        "default": "Kyle"
-      },
-      "lastName": {
-        "default": "Burroughs"
-      },
-      "sweaterNumber": 28,
-      "positionCode": "D",
-      "shootsCatches": "R",
-      "heightInInches": 72,
-      "weightInPounds": 193,
-      "heightInCentimeters": 183,
-      "weightInKilograms": 88,
-      "birthDate": "1995-07-12",
-      "birthCity": {
-        "default": "Vancouver"
-      },
-      "birthCountry": "CAN",
-      "birthStateProvince": {
-        "default": "BC"
-      }
-    },
-    {
       "id": 8478476,
       "headshot": "https://assets.nhle.com/mugs/nhl/20262027/DAL/8478476.png",
       "firstName": {
