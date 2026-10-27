@@ -1,1 +1,0 @@
-curl -L -X GET "http://api-web.nhle.com/v1/club-schedule/TEAMABRV/week/2026-MM-DD" 
