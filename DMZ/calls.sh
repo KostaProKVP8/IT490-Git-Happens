@@ -5,6 +5,8 @@ team_arr=("TOR" "NJD" "NYR")
 
 for team in "${team_arr[@]}"; do
 
+#-------------------------------------------------------------------------------------------------------------------------------
+
 	mkdir -p "${team}"
 
 	curl -L -X GET "http://api-web.nhle.com/v1/club-schedule/${team}/week/2026-10-20" | jq > ${team}/${team}_schedule.json
@@ -27,21 +29,21 @@ for team in "${team_arr[@]}"; do
 	done
 
 	rm tmp.txt
+#-------------------------------------------------------------------------------------------------------------------------------
+
+
+	curl -L -X GET "http://api-web.nhle.com/v1/roster/${team}/current" | jq > ${team}/players.json
+
+	position_arr=("forwards" "defensemen" "goalies")
+
+	for position in "${position_arr[@]}"; do
+		jq '.${position}[]
+
+
+	done
+
+
+
 
 done
 
-
-
-#numLines=$(wc -l gameids.txt | awk '{print $1}')
-
-
-
-
-#for ((x=1; x<=$numLines; x++)); do
-	#gameid=$(cat gameids.txt| sed -n "${x}p")
-	#cat gameids.txt| sed -n "${x}p" > home/adam/git/IT490-Git-Happens/DMZ/gameinfo/game_${gameid}.txt
-#	jq '.games[].id' TOR_schedule > games.txt
-#	jq '.games[].venue.default' >> games.txt
-#	jq '.games[]
-
-#done
