@@ -1,0 +1,36 @@
+2026020145
+2026020155
+2026020176
+2026020186
+"Nationwide Arena"
+"Scotiabank Arena"
+"Rogers Place"
+"Scotiabank Saddledome"
+"2026-10-20T23:00:00Z"
+"2026-10-22T23:00:00Z"
+"2026-10-24T23:00:00Z"
+"2026-10-27T00:30:00Z"
+"Blue Jackets"
+"Maple Leafs"
+"Oilers"
+"Flames"
+"CBJ"
+"TOR"
+"EDM"
+"CGY"
+2
+5
+2
+5
+"Maple Leafs"
+"Rangers"
+"Maple Leafs"
+"Maple Leafs"
+"TOR"
+"NYR"
+"TOR"
+"TOR"
+6
+4
+7
+2

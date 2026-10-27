@@ -1,0 +1,407 @@
+{
+  "previousStartDate": "2026-10-13",
+  "nextStartDate": "2026-10-27",
+  "calendarUrl": "https://nhl.ecal.com/tor",
+  "clubTimezone": "America/Toronto",
+  "clubUTCOffset": "-04:00",
+  "games": [
+    {
+      "id": 2026020145,
+      "season": 20262027,
+      "gameType": 2,
+      "gameDate": "2026-10-20",
+      "venue": {
+        "default": "Nationwide Arena"
+      },
+      "neutralSite": false,
+      "startTimeUTC": "2026-10-20T23:00:00Z",
+      "easternUTCOffset": "-04:00",
+      "venueUTCOffset": "-04:00",
+      "venueTimezone": "US/Eastern",
+      "gameState": "OFF",
+      "gameScheduleState": "OK",
+      "tvBroadcasts": [
+        {
+          "id": 282,
+          "market": "N",
+          "countryCode": "CA",
+          "network": "SN",
+          "sequenceNumber": 21
+        },
+        {
+          "id": 647,
+          "market": "H",
+          "countryCode": "US",
+          "network": "CBJNHL",
+          "sequenceNumber": 1
+        },
+        {
+          "id": 755,
+          "market": "H",
+          "countryCode": "US",
+          "network": "CBJHN",
+          "sequenceNumber": 1
+        }
+      ],
+      "awayTeam": {
+        "id": 10,
+        "commonName": {
+          "default": "Maple Leafs"
+        },
+        "placeName": {
+          "default": "Toronto"
+        },
+        "placeNameWithPreposition": {
+          "default": "Toronto",
+          "fr": "de Toronto"
+        },
+        "abbrev": "TOR",
+        "logo": "https://assets.nhle.com/logos/nhl/svg/TOR_light.svg",
+        "darkLogo": "https://assets.nhle.com/logos/nhl/svg/TOR_dark.svg",
+        "awaySplitSquad": false,
+        "hotelLink": "https://marriott.com/search/findHotels.mi?destinationAddress.destination=NATIONWIDE+ARENA,+COLUMBUS,+OHIO,+USA&cid=DIS_GLB000791Q_GLE000HJ7H_GLF0017UVE",
+        "hotelDesc": "Book Now",
+        "score": 6
+      },
+      "homeTeam": {
+        "id": 29,
+        "commonName": {
+          "default": "Blue Jackets"
+        },
+        "placeName": {
+          "default": "Columbus"
+        },
+        "placeNameWithPreposition": {
+          "default": "Columbus",
+          "fr": "de Columbus"
+        },
+        "abbrev": "CBJ",
+        "logo": "https://assets.nhle.com/logos/nhl/svg/CBJ_light.svg",
+        "darkLogo": "https://assets.nhle.com/logos/nhl/svg/CBJ_dark.svg",
+        "homeSplitSquad": false,
+        "hotelLink": "https://www.sonesta.com/sonesta-hotels-resorts/oh/columbus/sonesta-columbus-downtown?isGroupCode=false&promoCode=CBJPROMO",
+        "hotelDesc": "Stay at Sonesta Columbus Downtown",
+        "score": 2
+      },
+      "periodDescriptor": {
+        "number": 3,
+        "periodType": "REG",
+        "maxRegulationPeriods": 3
+      },
+      "gameOutcome": {
+        "lastPeriodType": "REG"
+      },
+      "winningGoalie": {
+        "playerId": 8476932,
+        "firstInitial": {
+          "default": "A."
+        },
+        "lastName": {
+          "default": "Stolarz"
+        }
+      },
+      "winningGoalScorer": {
+        "playerId": 8479318,
+        "firstInitial": {
+          "default": "A."
+        },
+        "lastName": {
+          "default": "Matthews"
+        }
+      },
+      "threeMinRecap": "/video/tor-at-cbj-recap-6407162763112",
+      "threeMinRecapFr": "/fr/video/tor-vs-cbj-20-10-2026-resume-6407163161112",
+      "condensedGame": "/video/tor-at-cbj-condensed-game-6407161322112",
+      "gameCenterLink": "/gamecenter/tor-vs-cbj/2026/10/20/2026020145"
+    },
+    {
+      "id": 2026020155,
+      "season": 20262027,
+      "gameType": 2,
+      "gameDate": "2026-10-22",
+      "venue": {
+        "default": "Scotiabank Arena"
+      },
+      "neutralSite": false,
+      "startTimeUTC": "2026-10-22T23:00:00Z",
+      "easternUTCOffset": "-04:00",
+      "venueUTCOffset": "-04:00",
+      "venueTimezone": "America/Toronto",
+      "gameState": "OFF",
+      "gameScheduleState": "OK",
+      "tvBroadcasts": [
+        {
+          "id": 293,
+          "market": "H",
+          "countryCode": "CA",
+          "network": "TSN4",
+          "sequenceNumber": 137
+        },
+        {
+          "id": 27,
+          "market": "A",
+          "countryCode": "US",
+          "network": "MSG",
+          "sequenceNumber": 417
+        }
+      ],
+      "awayTeam": {
+        "id": 3,
+        "commonName": {
+          "default": "Rangers"
+        },
+        "placeName": {
+          "default": "New York"
+        },
+        "placeNameWithPreposition": {
+          "default": "New York",
+          "fr": "de New York"
+        },
+        "abbrev": "NYR",
+        "logo": "https://assets.nhle.com/logos/nhl/svg/NYR_light.svg",
+        "darkLogo": "https://assets.nhle.com/logos/nhl/svg/NYR_dark.svg",
+        "awaySplitSquad": false,
+        "score": 4
+      },
+      "homeTeam": {
+        "id": 10,
+        "commonName": {
+          "default": "Maple Leafs"
+        },
+        "placeName": {
+          "default": "Toronto"
+        },
+        "placeNameWithPreposition": {
+          "default": "Toronto",
+          "fr": "de Toronto"
+        },
+        "abbrev": "TOR",
+        "logo": "https://assets.nhle.com/logos/nhl/svg/TOR_light.svg",
+        "darkLogo": "https://assets.nhle.com/logos/nhl/svg/TOR_dark.svg",
+        "homeSplitSquad": false,
+        "hotelLink": "https://www.marriott.com/search/findHotels.mi?destinationAddress.destination=SCOTIABANK+ARENA,+TORONTO,+CANADA&cid=DIS_GLB000791Q_GLE000HJ7H_GLF0017USO",
+        "hotelDesc": "Book Now",
+        "score": 5
+      },
+      "periodDescriptor": {
+        "number": 3,
+        "periodType": "REG",
+        "maxRegulationPeriods": 3
+      },
+      "gameOutcome": {
+        "lastPeriodType": "REG"
+      },
+      "winningGoalie": {
+        "playerId": 8475683,
+        "firstInitial": {
+          "default": "S."
+        },
+        "lastName": {
+          "default": "Bobrovsky",
+          "cs": "Bobrovskij",
+          "fi": "Bobrovski",
+          "sk": "Bobrovskij"
+        }
+      },
+      "winningGoalScorer": {
+        "playerId": 8479442,
+        "firstInitial": {
+          "default": "T."
+        },
+        "lastName": {
+          "default": "Stecher"
+        }
+      },
+      "threeMinRecap": "/video/nyr-at-tor-recap-6407267338112",
+      "threeMinRecapFr": "/fr/video/nyr-vs-tor-22-10-2026-resume-6407266061112",
+      "condensedGame": "/video/nyr-at-tor-condensed-game-6407267714112",
+      "gameCenterLink": "/gamecenter/nyr-vs-tor/2026/10/22/2026020155"
+    },
+    {
+      "id": 2026020176,
+      "season": 20262027,
+      "gameType": 2,
+      "gameDate": "2026-10-24",
+      "venue": {
+        "default": "Rogers Place"
+      },
+      "neutralSite": false,
+      "startTimeUTC": "2026-10-24T23:00:00Z",
+      "easternUTCOffset": "-04:00",
+      "venueUTCOffset": "-06:00",
+      "venueTimezone": "America/Edmonton",
+      "gameState": "OFF",
+      "gameScheduleState": "OK",
+      "tvBroadcasts": [
+        {
+          "id": 282,
+          "market": "N",
+          "countryCode": "CA",
+          "network": "SN",
+          "sequenceNumber": 21
+        }
+      ],
+      "awayTeam": {
+        "id": 10,
+        "commonName": {
+          "default": "Maple Leafs"
+        },
+        "placeName": {
+          "default": "Toronto"
+        },
+        "placeNameWithPreposition": {
+          "default": "Toronto",
+          "fr": "de Toronto"
+        },
+        "abbrev": "TOR",
+        "logo": "https://assets.nhle.com/logos/nhl/svg/TOR_light.svg",
+        "darkLogo": "https://assets.nhle.com/logos/nhl/svg/TOR_dark.svg",
+        "awaySplitSquad": false,
+        "hotelLink": "https://marriott.com/search/findHotels.mi?destinationAddress.destination=ROGERS+PLACE,+EDMONTON,+ALBERTA&cid=DIS_GLB000791Q_GLE000HJ7H_GLF0017UWS",
+        "hotelDesc": "Book Now",
+        "score": 7
+      },
+      "homeTeam": {
+        "id": 22,
+        "commonName": {
+          "default": "Oilers"
+        },
+        "placeName": {
+          "default": "Edmonton"
+        },
+        "placeNameWithPreposition": {
+          "default": "Edmonton",
+          "fr": "d'Edmonton"
+        },
+        "abbrev": "EDM",
+        "logo": "https://assets.nhle.com/logos/nhl/svg/EDM_light.svg",
+        "darkLogo": "https://assets.nhle.com/logos/nhl/svg/EDM_dark.svg",
+        "homeSplitSquad": false,
+        "score": 2
+      },
+      "periodDescriptor": {
+        "number": 3,
+        "periodType": "REG",
+        "maxRegulationPeriods": 3
+      },
+      "gameOutcome": {
+        "lastPeriodType": "REG"
+      },
+      "winningGoalie": {
+        "playerId": 8476932,
+        "firstInitial": {
+          "default": "A."
+        },
+        "lastName": {
+          "default": "Stolarz"
+        }
+      },
+      "winningGoalScorer": {
+        "playerId": 8479442,
+        "firstInitial": {
+          "default": "T."
+        },
+        "lastName": {
+          "default": "Stecher"
+        }
+      },
+      "threeMinRecap": "/video/tor-at-edm-recap-6407364054112",
+      "threeMinRecapFr": "/fr/video/tor-vs-edm-24-10-2026-resume-6407362789112",
+      "condensedGame": "/video/tor-at-edm-condensed-game-6407362986112",
+      "gameCenterLink": "/gamecenter/tor-vs-edm/2026/10/24/2026020176"
+    },
+    {
+      "id": 2026020186,
+      "season": 20262027,
+      "gameType": 2,
+      "gameDate": "2026-10-26",
+      "venue": {
+        "default": "Scotiabank Saddledome"
+      },
+      "neutralSite": false,
+      "startTimeUTC": "2026-10-27T00:30:00Z",
+      "easternUTCOffset": "-04:00",
+      "venueUTCOffset": "-06:00",
+      "venueTimezone": "America/Edmonton",
+      "gameState": "OFF",
+      "gameScheduleState": "OK",
+      "tvBroadcasts": [
+        {
+          "id": 549,
+          "market": "N",
+          "countryCode": "CA",
+          "network": "SN+",
+          "sequenceNumber": 117
+        }
+      ],
+      "awayTeam": {
+        "id": 10,
+        "commonName": {
+          "default": "Maple Leafs"
+        },
+        "placeName": {
+          "default": "Toronto"
+        },
+        "placeNameWithPreposition": {
+          "default": "Toronto",
+          "fr": "de Toronto"
+        },
+        "abbrev": "TOR",
+        "logo": "https://assets.nhle.com/logos/nhl/svg/TOR_light.svg",
+        "darkLogo": "https://assets.nhle.com/logos/nhl/svg/TOR_dark.svg",
+        "awaySplitSquad": false,
+        "hotelLink": "https://marriott.com/search/findHotels.mi?destinationAddress.destination=SCOTIABANK+SADDLEDOME,+CALGARY&cid=DIS_GLB000791Q_GLE000HJ7H_GLF0017UW0",
+        "hotelDesc": "Book Now",
+        "score": 2
+      },
+      "homeTeam": {
+        "id": 20,
+        "commonName": {
+          "default": "Flames"
+        },
+        "placeName": {
+          "default": "Calgary"
+        },
+        "placeNameWithPreposition": {
+          "default": "Calgary",
+          "fr": "de Calgary"
+        },
+        "abbrev": "CGY",
+        "logo": "https://assets.nhle.com/logos/nhl/svg/CGY_light.svg",
+        "darkLogo": "https://assets.nhle.com/logos/nhl/svg/CGY_dark.svg",
+        "homeSplitSquad": false,
+        "score": 5
+      },
+      "periodDescriptor": {
+        "number": 3,
+        "periodType": "REG",
+        "maxRegulationPeriods": 3
+      },
+      "gameOutcome": {
+        "lastPeriodType": "REG"
+      },
+      "winningGoalie": {
+        "playerId": 8482445,
+        "firstInitial": {
+          "default": "D."
+        },
+        "lastName": {
+          "default": "Cooley"
+        }
+      },
+      "winningGoalScorer": {
+        "playerId": 8484860,
+        "firstInitial": {
+          "default": "M."
+        },
+        "lastName": {
+          "default": "Gridin"
+        }
+      },
+      "threeMinRecap": "/video/tor-at-cgy-recap-6407452646112",
+      "threeMinRecapFr": "/fr/video/tor-vs-cgy-26-10-2026-resume-6407450879112",
+      "condensedGame": "/video/tor-at-cgy-condensed-game-6407452157112",
+      "gameCenterLink": "/gamecenter/tor-vs-cgy/2026/10/26/2026020186"
+    }
+  ]
+}
