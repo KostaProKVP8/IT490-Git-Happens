@@ -16,11 +16,11 @@
         echo(json_encode($response));
     }
     if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["userID"]) && isset($_POST["inviteID"]) && $_POST["method"]=="checkLeague"){
-        $token = $_POST["inviteID"]
+        $token = $_POST["inviteID"];
         verifyLeague($token);
     }
     if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["userID"]) && $_POST["method"]=="newLeague"){
-        $token = $_POST["userID"]
+        $token = $_POST["userID"];
         createLeague($token);
     }
 ?>
