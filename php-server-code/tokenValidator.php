@@ -11,7 +11,7 @@
 
     }
     if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["token"]) && isset($_POST["method"]) && $_POST["method"]=="validate"){
-        $token = $_POST["token"]
+        $token = $_POST["token"];
         validateToken($token);
     }
 ?>
