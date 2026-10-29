@@ -149,7 +149,7 @@ function addGame($playerID, $gameID, $teamSlug, $goals, $assists, $points, $tota
   global $sidequestDB;
 
   $stmt = $sidequestDB->prepare("INSERT INTO stats (playerID, gameID, teamSlug, goals, assists, points, totalShots, gameWinner, penaltyMins, OTGoals, icetime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);"); // TODO: Query should be fixed
-  $stmt->bind_param('iisiiiiiiis', $playerId, $gameID, $teamSlug, $goals, $assists, $points, $totalShots, $gameWinner, $penaltyMins, $OTGoals, $icetime);
+  $stmt->bind_param('iisiiiiiiis', $playerID, $gameID, $teamSlug, $goals, $assists, $points, $totalShots, $gameWinner, $penaltyMins, $OTGoals, $icetime);
     // echo($stmt);
   $stmt->execute();
 
