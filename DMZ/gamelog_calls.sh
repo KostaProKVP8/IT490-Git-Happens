@@ -23,6 +23,7 @@ for team in "${team_arr[@]}"; do
 		jq '.gameLog[].assists' ${team}/temp_gamelog.json >> ${team}/another_tmp.txt
 		jq '.gameLog[].otGoals' ${team}/temp_gamelog.json >> ${team}/another_tmp.txt
 		jq '.gameLog[].toi' ${team}/temp_gamelog.json >> ${team}/another_tmp.txt
+		jq '.gameLog[].goals' ${team}/temp_gamelog.json >> ${team}/another_tmp.txt
 
 		for ((z=1;z<=$num_Games;z++)); do
 			sed -n "${z}~${num_Games}p" ${team}/another_tmp.txt > tmp.txt
