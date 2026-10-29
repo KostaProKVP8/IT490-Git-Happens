@@ -20,7 +20,11 @@ function query($query, $db, $type) {
         case "getPlayers":
             $request['playerID'] = $query['playerID'];
             break;
-            
+
+        case "newLeague":
+            $request['leagueID'] = $query['leagueID'];
+            break;
+
         case "login":
             $request['user'] = $query['user'];
             $request['passwordHash'] = $query['passwordHash'];

@@ -1,8 +1,9 @@
 import { getSession } from "./utility/session";
 
 function createLeague(){
+    const leagueID = null;
     var xHttpReq = new XMLHttpRequest();
-    xHttpReq.open("POST","../php-server-code/auth.php",true);
+    xHttpReq.open("POST","../php-server-code/leagueVerify.php",true);
     xHttpReq.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
     xHttpReq.onreadystatechange = function(){
         if( xHttpReq.status == 200 && xHttpReq.readyState === 4){
@@ -11,8 +12,10 @@ function createLeague(){
             console.log(response);
             if( response.returnCode == 1){
                 // sessionStorage.setItem("sessionId",response.sessionId);
-                saveSession(response.sessionId);
-                window.location.href="../landing.html";
+                // saveSession(response.sessionId);
+                document.cookie = `leagueID=${response.leagueID}; role=admin`;
+                document.getElementById("successPrompt").textContent = `You made a league! Invite other players by giving them this link: http://100.91.135.73/invite.html?inviteID=${response.leagueID}`
+                // window.location.href="../leaderboard.html";
             }
             else{
                 console.error(response.message);  
@@ -23,7 +26,7 @@ function createLeague(){
             console.log("Error:", xHttpReq.status);
         }
     };
-    xHttpReq.send(`userName=${encodeURIComponent(userName)}&hash=${encodeURIComponent(passwordHash)}&email=${encodeURIComponent(email)}&method=${encodeURIComponent("register")}`);
+    xHttpReq.send(`$leagueID=${encodeURI(leagueID)}&method=${encodeURIComponent("newLeague")}`);
 }
 
 const confirmButton = document.getElementById("createLeague");
