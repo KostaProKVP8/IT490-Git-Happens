@@ -158,9 +158,9 @@ function addGame($playerID, $gameID, $teamSlug, $goals, $assists, $points, $tota
 
 function newLeague($userID,$leagueName) {
   global $sidequestDB;
-
+  $isAdmin = 1;
   $stmt = $sidequestDB->prepare("INSERT INTO leagues (userid,isAdmin,leagueName) VALUES (?, ?, ?);"); // TODO: Query should be fixed
-  $stmt->bind_param('iis', $userID, 1, $leagueName);
+  $stmt->bind_param('iis', $userID, $isAdmin, $leagueName);
     // echo($stmt);
   $stmt->execute();
 
@@ -169,9 +169,9 @@ function newLeague($userID,$leagueName) {
 
 function joinLeague($leagueID, $userID, $leagueName) {
   global $sidequestDB;
-
+  $isAdmin = 0;
   $stmt = $sidequestDB->prepare("INSERT INTO leagues (leagueID,userid,isAdmin,leagueName) VALUES (?, ?, ?, ?);"); // TODO: Query should be fixed
-  $stmt->bind_param('iiis', $leagueID, $userID, 0, $leagueName);
+  $stmt->bind_param('iiis', $leagueID, $userID, $isAdmin, $leagueName);
     // echo($stmt);
   $stmt->execute();
 
