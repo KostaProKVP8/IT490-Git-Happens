@@ -36,6 +36,7 @@ async function login(){
                 sessionStorage.setItem("userId", response.userid);
                 saveSession(response.sessionId);
                 console.log(getSession());
+                const parameters = new URLSearchParams(window.location.search);
                 if (parameters.has("inviteID")){
                     sessionStorage.setItem("leagueId", parameters.get("inviteID"));
                     // window.location.href = "../landing.html";
