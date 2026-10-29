@@ -1,7 +1,8 @@
 // import { getSession } from "./utility/session.js";
 
 function createLeague(){
-    const leagueID = null;
+    // const leagueID = null;
+    const userID = sessionStorage.getItem("userId");
     var xHttpReq = new XMLHttpRequest();
     xHttpReq.open("POST","../php-server-code/leagueVerify.php",true);
     xHttpReq.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
