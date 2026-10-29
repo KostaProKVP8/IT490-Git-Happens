@@ -32,12 +32,13 @@ async function login(){
             const response = JSON.parse(xHttpReq.response);
 	        console.log(response);
             if( response.returnCode == 1){
+                console.log(response.sessionId);
                 sessionStorage.setItem("userId", response.userid);
                 saveSession(response.sessionId);
                 console.log(getSession());
                 if (parameters.has("inviteID")){
                     sessionStorage.setItem("leagueId", parameters.get("inviteID"));
-                    window.location.href = "../landing.html";
+                    // window.location.href = "../landing.html";
                 }
             }
             else{
