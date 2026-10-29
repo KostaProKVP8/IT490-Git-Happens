@@ -156,22 +156,22 @@ function addGame($playerID, $gameID, $teamSlug, $goals, $assists, $points, $tota
   return array("returnCode" => 0, "message" => "Failed to Add :(");
 }
 
-function newLeague($userID) {
+function newLeague($userID,$leagueName) {
   global $sidequestDB;
 
-  $stmt = $sidequestDB->prepare("INSERT INTO leagues (leagueID,userid,isAdmin) VALUES (?, ?, ?);"); // TODO: Query should be fixed
-  $stmt->bind_param('iii', 0, $userID, 1);
+  $stmt = $sidequestDB->prepare("INSERT INTO leagues (userid,isAdmin,leagueName) VALUES (?, ?, ?);"); // TODO: Query should be fixed
+  $stmt->bind_param('ii', $userID, 1,$leagueName);
     // echo($stmt);
   $stmt->execute();
 
   return array("returnCode" => 0, "message" => "Failed to Create :(");
 }
 
-function joinLeague($leagueID, $userID) {
+function joinLeague($leagueID, $userID, $leagueName) {
   global $sidequestDB;
 
-  $stmt = $sidequestDB->prepare("INSERT INTO leagues (leagueID,userid,isAdmin) VALUES (?, ?, ?);"); // TODO: Query should be fixed
-  $stmt->bind_param('iii', $leagueID, $userID, 0);
+  $stmt = $sidequestDB->prepare("INSERT INTO leagues (leagueID,userid,isAdmin,leagueName) VALUES (?, ?, ?, ?);"); // TODO: Query should be fixed
+  $stmt->bind_param('iii', $leagueID, $userID, 0, $leagueName);
     // echo($stmt);
   $stmt->execute();
 
@@ -201,7 +201,9 @@ function requestProcessor($request)
     case "get_player":
       return getPlayer($request['playerID']);
     case "newLeague":
-      return newLeague($request['userID']);
+      return newLeague($request['userID'],$request['leagueName']);
+    case "joinLeague":
+      return joinLeague($request['userID'], $request['leagueID'], $request['leagueName']);
   }
   return array("returnCode" => '0', 'message'=>"Server received request and processed");
 }
