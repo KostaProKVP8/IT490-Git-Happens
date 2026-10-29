@@ -39,7 +39,7 @@ async function login(){
                 const parameters = new URLSearchParams(window.location.search);
                 if (parameters.has("inviteID")){
                     sessionStorage.setItem("leagueId", parameters.get("inviteID"));
-                    // window.location.href = "../landing.html";
+                    window.location.href = "../landing.html";
                 }
             }
             else{
