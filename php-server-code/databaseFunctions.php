@@ -23,7 +23,13 @@ function query($query, $db, $type) {
 
         case "newLeague":
             $request['userID'] = $query['userID'];
+            $request['leagueName'] = $query['leagueName'];
             break;
+        
+        case "joinLeague":
+            $request['userID'] = $query['userID'];
+            $request['leagueName'] = $query['leagueName'];
+            break;            
 
         case "login":
             $request['user'] = $query['user'];

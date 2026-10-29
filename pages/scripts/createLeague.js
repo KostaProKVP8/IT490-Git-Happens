@@ -3,6 +3,7 @@
 function createLeague(){
     // const leagueID = null;
     const userID = sessionStorage.getItem("userId");
+    const leagueName = document.getElementById("leagueName");
     var xHttpReq = new XMLHttpRequest();
     xHttpReq.open("POST","../php-server-code/leagueVerify.php",true);
     xHttpReq.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
@@ -27,7 +28,7 @@ function createLeague(){
             console.log("Error:", xHttpReq.status);
         }
     };
-    xHttpReq.send(`userID=${encodeURI(userID)}&method=${encodeURIComponent("newLeague")}`);
+    xHttpReq.send(`userID=${encodeURI(userID)}&leagueName=${encodeURIComponent(leagueName)}&method=${encodeURIComponent("newLeague")}`);
 }
 
 const confirmButton = document.getElementById("createLeague");
