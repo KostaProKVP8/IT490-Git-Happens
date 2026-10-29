@@ -2,6 +2,8 @@
 
 team=NYR
 
+#curl -L GET "http://api-web.nhle.com/v1/roster/{team}/current" | jq > players.json 
+
         jq '.forwards[].id' players.json > players.txt
 		numPlayers=$(wc -l players.txt | awk '{print $1}')
 	jq '.forwards[].firstName.default' players.json  >> players.txt
@@ -18,7 +20,7 @@ team=NYR
                 cat tmp.txt > player_${playerid}.txt
 		echo '"forward"' >> player_${playerid}.txt
 		echo "\"${team}\"" >> player_${playerid}.txt
-        done
+	done
 	rm tmp.txt
 
 #______________________________________________________________________________

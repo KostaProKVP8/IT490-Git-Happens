@@ -14,9 +14,10 @@ for team in "${team_arr[@]}"; do
 
 		curl -L -X GET "http://api-web.nhle.com/v1/player/${thisId}/game-log/20262027/2" |  jq > ${team}/temp_gamelog.json
 
-		jq '.gameLog[].gameId' ${team}/temp_gamelog.json > ${team}/another_tmp.txt
-			num_Games=$(wc -l ${team}/another_tmp.txt | awk '{print $1}')
+#		jq '.gameLog[].gameId' ${team}/temp_gamelog.json > ${team}/another_tmp.txt
+
 		jq '.gameLog[].points' ${team}/temp_gamelog.json >> ${team}/another_tmp.txt
+			num_Games=$(wc -l ${team}/another_tmp.txt | awk '{print $1}')
 		jq '.gameLog[].shots' ${team}/temp_gamelog.json >> ${team}/another_tmp.txt
 		jq '.gameLog[].gameWinningGoals' ${team}/temp_gamelog.json >> ${team}/another_tmp.txt
 		jq '.gameLog[].pim' ${team}/temp_gamelog.json >> ${team}/another_tmp.txt
@@ -27,7 +28,16 @@ for team in "${team_arr[@]}"; do
 
 		for ((z=1;z<=$num_Games;z++)); do
 			sed -n "${z}~${num_Games}p" ${team}/another_tmp.txt > tmp.txt
+			
+
+
+
+
+
 			cat tmp.txt >> ${team}/${thisId}_gamelog.txt
+
+
+
 		done
 		rm tmp.txt
 	done

@@ -5,7 +5,7 @@ require_once('rabbitMQLib.inc');
 
 function connectDB() {
     // returns the RabbitMQ client instead of a mysqli connection
-    return new rabbitMQClient("testRabbitMQ.ini", "testServer");
+    return new rabbitMQClient("DMZRabbitMQ.ini", "dmzPush");
 }
 
 function query($query, $db, $type) {
