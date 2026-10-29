@@ -1,22 +1,57 @@
 <!DOCTYPE html>
-<script type="module" src="scripts/validate.js"></script>
+<!-- <script type="module" src="scripts/utility/validate.js"></script> -->
 <html>
     <head>
-        <title>Git Happens!</title>
+        <title>Home | Sidequest</title>
         <link rel="stylesheet" href="stylesheets/styles.css">
         <link rel="stylesheet" href="stylesheets/landing.css">
+        <link rel="shortcut icon" href="/assets/favicon/favicon.ico" type="image/x-icon">
     </head>
     <body>
         <header>
-            <a href="index.html"><h1>SIDEQUEST</h1></a>
-            <button class="button" id="logout">Logout</button>
+            <span>
+                <a href="index.html"><h1>SIDEQUEST</h1></a>
+                <button class="pinkButton" id="logout">Logout</button>
+            </span>
         </header>
-        <div class="landingDiv">
-            <p id="successPrompt">Logged in as User</p>
+        <div class="mainDiv">
+            <!-- <p id="successPrompt">Logged in as User</p> -->
+            <div class="leagueDisplayList">
+                <h2>My League</h2>
+                <div class="leagueDisplay">
+                    <h3 id="leagueName">League 1</h3>
+                    <table class="displayTable">
+                        <tr>
+                            <td class="leftTable">Score</td>
+                            <td class="rightTable" id="overallPoints">000 pts</td>
+                        </tr>
+                        <tr>
+                            <td class="leftTable">Rank</td>
+                            <td class="rightTable" id="placement">1st place</td>
+                        </tr>
+                        <tr>
+                            <td class="leftTable">Points This Week</td>
+                            <td class="rightTable" id="pointsThisWeek">000 pts</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="buttonDisplay">
+                    <button class="blueButton" id="trade">Trade Players</button>
+                    <button class="blueButton" id="toBracket">My Team</button>
+                    <button class="blueButton" id="toLeaderboard">Leaderboard</button>
+                </div>
+            </div>
+            <div class="updates">
+                <h2>Recent News</h2>
+            </div>
         </div>
+
         <script type="module" src="scripts/logout.js"></script>
+        <script type="module" src="scripts/landingListeners.js"></script>
+
         <footer>
-            Foot
+            Git Happens! Creating unknown new technologies since 2026
+
         </footer>
     </body>
 </html>

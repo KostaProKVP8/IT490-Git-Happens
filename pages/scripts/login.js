@@ -1,5 +1,5 @@
-import { _hash, validateInput } from "./Utility.js";
-import { getSession, saveSession } from "./session.js";
+import { _hash, validateInput } from "./utility/Utility.js";
+import { getSession, saveSession } from "./utility/session.js";
 
 async function login(){
     // const endpointUrl = "127.0.0.1"; 
@@ -21,7 +21,7 @@ async function login(){
 
     xHttpReq.open("POST","../../php-server-code/auth.php",true);
     xHttpReq.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
-//    console.log("RabbitMQ can go fuck itself"); 
+
     xHttpReq.onreadystatechange = function(){
         if(xHttpReq.readyState !== XMLHttpRequest.DONE){
               return;

@@ -22,19 +22,30 @@ body{
     padding: 0px;
     margin: 0px;
     font-family: 'Tango Sans';
+    color:var(--secondary-accent-color);
     /* display: flex; */
 }
 
 header{
     margin:0;
-    padding:0;
+    padding-top:0;
+    padding-bottom:0;
+    padding-left:0;
+    padding-right:4vw;
     height:20vw;
     max-height: 150px;
     background-color: var(--secondary-background-color);
+
 }
 
 header a{
     text-decoration: none;
+}
+
+span{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 header h1{
@@ -68,4 +79,47 @@ footer{
     margin-top:3vh;
     height:20vh;
     background-color: var(--secondary-background-color);
+    text-align: center;
+}
+
+
+.pinkButton{
+    background-color: var(--primary-accent-color);
+    filter: drop-shadow(0.5vw 0.5vw var(--secondary-accent-color));
+    width:7vw;
+    height:3vw;
+    font-family: 'Tango Sans';
+    font-size: 1vw;
+    color: var(--secondary-accent-color);
+    border: none;
+
+
+}
+
+.pinkButton:hover{
+    background-color: var(--secondary-accent-color);
+    filter: drop-shadow(0.5vw 0.5vw var(--primary-accent-color));
+    color: var(--primary-accent-color);
+
+}
+
+.blueButton{
+    background-color: var(--secondary-background-color);
+    filter: drop-shadow(0.5vw 0.5vw var(--secondary-accent-color));
+    width:7vw;
+    height:3vw;
+    font-family: 'Tango Sans';
+    font-size: 1vw;
+    color: var(--secondary-accent-color);
+    border: none;
+
+
+}
+
+
+.blueButton:hover{
+    background-color: var(--secondary-accent-color);
+    filter: drop-shadow(0.5vw 0.5vw var(--secondary-background-color));
+    color: var(--primary-accent-color);
+
 }

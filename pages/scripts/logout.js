@@ -1,4 +1,4 @@
-import { clearSession } from "./session";
+import { clearSession } from "./utility/session.js";
 
 function logout(){
     clearSession();

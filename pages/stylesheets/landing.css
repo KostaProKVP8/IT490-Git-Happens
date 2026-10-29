@@ -2,3 +2,60 @@
     background-color: green;
     height: 100vh;
 }
+
+ul{
+    text-align: left;
+    list-style: none;
+}
+
+.mainDiv{
+    display: flex;
+    justify-content: center;
+    gap:5vw;
+}
+
+.leagueDisplayList, .updates{
+    background-color: var(--primary-accent-color);
+    filter: drop-shadow(0.5vw 0.5vw var(--secondary-accent-color));
+    margin: 2vw;
+    padding: 1vw;
+    width:25vw;
+    text-align: center;
+}
+
+.leagueDisplay{
+    padding-top: 2vw;
+    background-color: var(--secondary-background-color);
+}
+
+
+.leftTable{
+    text-align:left;
+    padding-right:4vw;
+    padding-left: 1vw;
+}
+
+.rightTable{
+    text-align: right;
+    padding-left: 4vw;
+    padding-right:1vw;
+}
+
+.leftTable,.rightTable{
+    padding-bottom: 2vw;
+}
+
+.displayTable, tr{
+    width:100%;
+}
+
+.buttonDisplay{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2vw;
+    gap:1vw;
+}
+
+.buttonDisplay .blueButton{
+    width: 100%;
+}

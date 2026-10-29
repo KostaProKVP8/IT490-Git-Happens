@@ -1,0 +1,32 @@
+table{
+    background-color: var(--primary-accent-color);
+    filter: drop-shadow(0.5vw 0.5vw var(--secondary-accent-color));
+}
+
+td{
+    padding: 1vw;
+}
+
+.mainDiv{
+    height:auto;
+}
+
+.poolSpan{
+    display:flex;
+    justify-content:center;
+    gap:3vw;
+}
+
+.tradingPlayer{
+    text-align: center;
+    background-color: var(--primary-accent-color);
+    padding:1vw;
+}
+.tradingPlayerHeadshot{
+    width: 5vw;
+}
+
+.statList{
+    list-style: none;
+    text-align: left;
+}

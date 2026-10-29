@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!-- <script type="module" src="scripts/utility/validate.js"></script> -->
+<html>
+    <head>
+        <title id="pageTitle">Bracket | Sidequest</title>
+        <link rel="stylesheet" href="stylesheets/styles.css">
+        <link rel="stylesheet" href="stylesheets/teamDisplay.css">
+        <link rel="shortcut icon" href="/assets/favicon/favicon.ico" type="image/x-icon">
+    </head>
+    <body>
+        <header>
+            <span>
+                <a href="index.html"><h1>SIDEQUEST</h1></a>
+                <button class="pinkButton" id="logout">Logout</button>
+            </span>
+        </header>
+        <div class="mainDiv">
+            <div class="statsDisplay">
+                <span>
+                    <p id="teamName">Sample Name</p>
+                    <p id="overallScore">Overall Score: 000 pts</p>
+                    <p id="bracketPlacing">1st Place</p>
+                    <button class="blueButton" id="toLeaderboard">View Leaderboard</button>
+                </span>
+            </div>
+
+            <div class="teamDisplay">
+                <div class="startingLineup">
+                    <div class="startingOffense">
+                        <div class="startingPlayerDiv" id="startingLW"><img src="/assets/NHL Default Skater.png" class="startingHeadshot"><p class="playerName">Player Name</p></div>
+                        <div class="startingPlayerDiv" id="startingC"><img src="/assets/NHL Default Skater.png" class="startingHeadshot"><p class="playerName">Player Name</p></div>
+                        <div class="startingPlayerDiv" id="startingRW"><img src="/assets/NHL Default Skater.png" class="startingHeadshot"><p class="playerName">Player Name</p></div>
+                    </div>
+                    <div class="startingDefense">
+                        <div class="startingPlayerDiv" id="startingLD"><img src="/assets/NHL Default Skater.png" class="startingHeadshot"><p class="playerName">Player Name</p></div>
+                        <div class="startingPlayerDiv" id="startingRD"><img src="/assets/NHL Default Skater.png" class="startingHeadshot"><p class="playerName">Player Name</p></div>
+                    </div>
+                    <div class="startingGoalkeeper">
+                        <div class="startingPlayerDiv" id="startingGK"><img src="/assets/NHL Default Skater.png" class="startingHeadshot"><p class="playerName">Player Name</p></div>
+                    </div>
+                </div>
+        
+                <div class="benchedPlayers">
+                    <h2>Bench</h2>
+                    <div class="benchedPlayerDiv" id="bench1"><img src="/assets/NHL Default Skater.png" class="benchedHeadshot"><p class="playerName">Player Name</p></div>
+                    <div class="benchedPlayerDiv" id="bench2"><img src="/assets/NHL Default Skater.png" class="benchedHeadshot"><p class="playerName">Player Name</p></div>
+                    <div class="benchedPlayerDiv" id="bench3"><img src="/assets/NHL Default Skater.png" class="benchedHeadshot"><p class="playerName">Player Name</p></div>
+                    <div class="benchedPlayerDiv" id="bench4"><img src="/assets/NHL Default Skater.png" class="benchedHeadshot"><p class="playerName">Player Name</p></div>
+                    <div class="benchedPlayerDiv" id="bench5"><img src="/assets/NHL Default Skater.png" class="benchedHeadshot"><p class="playerName">Player Name</p></div>
+                </div>
+            </div>
+            <div class="modifyTeam">
+                <span>
+                    <button class="blueButton" id="trade">Trade Players</button>
+                    <button class="blueButton" id="edit">Edit Team</button>
+                </span>
+            </div>
+        </div>
+        <script type="module" src="scripts/logout.js"></script>
+        <script type="module" src="scripts/bracket.js"></script>
+        <footer>
+            Git Happens! Creating unknown new technologies since 2026
+        </footer>
+    </body>
+</html>

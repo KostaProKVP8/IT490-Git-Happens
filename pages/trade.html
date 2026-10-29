@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!-- <script type="module" src="scripts/utility/validate.js"></script> -->
+<html>
+    <head>
+        <title>Trade | Sidequest</title>
+        <link rel="stylesheet" href="stylesheets/styles.css">
+        <link rel="stylesheet" href="stylesheets/trades.css">
+        <link rel="shortcut icon" href="/assets/favicon/favicon.ico" type="image/x-icon">
+    </head>
+    <body>
+        <header>
+            <span>
+                <a href="index.html"><h1>SIDEQUEST</h1></a>
+                <button class="pinkButton" id="logout">Logout</button>
+            </span>
+        </header>
+        <div class="mainDiv">
+            <div class="tradeList">
+                <div class="tradingPlayer"> 
+                    <h2>Now Trading</h2>
+                    <span class="poolSpan">
+                        <div>
+                            <img src="/assets/NHL Default Skater.png" class="tradingPlayerHeadshot">
+                            <p class="playerName">Player Name</p> 
+                        </div>
+                        <div class="playerStats">
+                            <ul class="statList">
+                                <li>Goals: </li>
+                                <li>Overall Score: </li>
+                            </ul>
+                        </div>
+                    </span>
+                </div>
+                <span class="poolSpan">
+                    <div class="poolList">
+                        <h2>Trade to Pool</h2>
+                        <table id="maritimePool">
+                            <thead>
+                                <td>Player Name</td>
+                                <td>Position</td>
+                                <td>NHL Team Name</td>
+                            </thead>
+                            <tr>
+                                <td>Sample 1</td>
+                                <td>LW</td>
+                                <td>Team A</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <br>
+                    <div class="playerLists">
+                        <h2>Trade with Other Players</h2>
+                        <table id="playerPools">
+                            <thead>
+                                <td>Player Name</td>
+                                <td>Position</td>
+                                <td>NHL Team Name</td>
+                                <td>Owned By</td>
+                            </thead>
+                            <tr>
+                                <td>Sample 1</td>
+                                <td>LW</td>
+                                <td>Team A</td>
+                                <td>Player X</td>
+                            </tr>
+                        </table>
+                    </div>
+                </span>
+                <button class="blueButton" id="toTeam"> Back to My Team </button>
+            </div>
+        </div>
+        <script type="module" src="scripts/logout.js"></script>
+        <script type="module" src="scripts/trades.js"></script>
+        <footer>
+            Git Happens! Creating unknown new technologies since 2026
+        </footer>
+    </body>
+</html> 

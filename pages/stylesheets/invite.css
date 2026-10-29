@@ -1,0 +1,6 @@
+.inviteDiv{
+    background-color: var(--primary-accent-color);
+    filter: drop-shadow(0.5vw 0.5vw var(--secondary-accent-color));
+    width:25vw;
+    height:25vw;
+}

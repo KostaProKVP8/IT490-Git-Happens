@@ -1,5 +1,5 @@
-import { _hash, validateInput } from "./Utility.js";
-import { saveSession } from "./session.js";
+import { _hash, validateInput } from "./utility/Utility.js";
+import { saveSession } from "./utility/session.js";
 
 async function register() {
     console.log("In register");
