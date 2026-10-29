@@ -21,7 +21,7 @@ async function checkToken(){
             else{
                 clearSession();
                 console.error(response.message);  
-                window.location.replace("../../error.html");
+                // window.location.replace("../../error.html");
             }
         }
         else{
