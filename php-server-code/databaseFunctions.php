@@ -17,6 +17,10 @@ function query($query, $db, $type) {
     $request['username'] = "webUser";
     $request['password'] = "Web-Bet4-Qp38";
     switch($type){
+        case "getPlayers":
+            $request['playerID'] = $query['playerID'];
+            break;
+            
         case "login":
             $request['user'] = $query['user'];
             $request['passwordHash'] = $query['passwordHash'];

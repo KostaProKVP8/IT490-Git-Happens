@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!-- <script type="module" src="scripts/validate.js"></script> -->
+
+<html>
+    <head>
+        <title>Template | Sidequest</title>
+        <link rel="stylesheet" href="stylesheets/styles.css">
+        <link rel="shortcut icon" href="/assets/favicon/favicon.ico" type="image/x-icon">
+
+    </head>
+    <body>
+        <header>
+            <span>
+                <a href="index.html"><h1>SIDEQUEST</h1></a>
+                <button class="pinkButton" id="logout">Logout</button>
+            </span>
+        </header>
+        <div class="mainDiv">
+            <h2 id="noLeagueYet"></h2>
+            <!-- <p id="successPrompt">Logged in as User</p> -->
+             <table class="leaderboardDisplay" id="leaderboard">
+                <thead>
+                    <td>Team Name</td>
+                    <td>Placement</td>
+                    <td>Overall Points</td>
+                    <td>Next Opponent</td>
+                </thead>
+                <tbody id="leaderboardBody"></tbody>
+             </table>
+        </div>
+        <script type="module" src="scripts/logout.js"></script>
+        <script type="module" src="scripts/leaderboard.js"></script>
+        <footer>
+            Git Happens! Creating unknown new technologies since 2026
+        </footer>
+    </body>
+</html>

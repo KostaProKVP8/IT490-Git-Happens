@@ -1,4 +1,4 @@
-const parameters = URLSearchParams(window.location.search);
+const parameters = new URLSearchParams(window.location.search);
 
 if (parameters.has("inviteID")){
     var xHttpReq = new XMLHttpRequest();
@@ -22,7 +22,7 @@ if (parameters.has("inviteID")){
 
                 document.getElementById("inviteMessage").textContent = `You have been invited to join ${response.leagueOwner}'s League`;
                 document.getElementById("inviteLeagueName").textContent = response.leagueName;
-                document.cookie = `leagueID=${response.leagueID};role=user`;
+                document.cookie = `leagueID=${response.leagueID}; role=user`;
             }
             else{
                 console.error(response);  
