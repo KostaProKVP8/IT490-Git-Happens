@@ -1,5 +1,5 @@
 <?php
-    require_once 'database_functions.php'
+    require_once 'database_functions.php';
     function verifyLeague($token){
             global $db;
             $query=array("sessionId" => $token);
