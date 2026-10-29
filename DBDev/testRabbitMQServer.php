@@ -159,7 +159,7 @@ function addGame($playerID, $gameID, $teamSlug, $goals, $assists, $points, $tota
 function newLeague($userID) {
   global $sidequestDB;
 
-  $stmt = $sidequestDB->prepare("INSERT INTO ___ (leagueID,userid,isAdmin) VALUES (?, ?, ?);"); // TODO: Query should be fixed
+  $stmt = $sidequestDB->prepare("INSERT INTO leagues (leagueID,userid,isAdmin) VALUES (?, ?, ?);"); // TODO: Query should be fixed
   $stmt->bind_param('iii', 0, $userID, 1);
     // echo($stmt);
   $stmt->execute();
@@ -170,7 +170,7 @@ function newLeague($userID) {
 function joinLeague($leagueID, $userID) {
   global $sidequestDB;
 
-  $stmt = $sidequestDB->prepare("INSERT INTO ___ (leagueID,userid,isAdmin) VALUES (?, ?, ?);"); // TODO: Query should be fixed
+  $stmt = $sidequestDB->prepare("INSERT INTO leagues (leagueID,userid,isAdmin) VALUES (?, ?, ?);"); // TODO: Query should be fixed
   $stmt->bind_param('iii', $leagueID, $userID, 0);
     // echo($stmt);
   $stmt->execute();
@@ -201,7 +201,7 @@ function requestProcessor($request)
     case "get_player":
       return getPlayer($request['playerID']);
     case "newLeague":
-      return createLeague();
+      return newLeague($request['userID']);
   }
   return array("returnCode" => '0', 'message'=>"Server received request and processed");
 }
