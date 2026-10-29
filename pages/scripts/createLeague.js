@@ -8,7 +8,8 @@ function createLeague(){
     xHttpReq.open("POST","../php-server-code/leagueVerify.php",true);
     xHttpReq.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
     xHttpReq.onreadystatechange = function(){
-        if( xHttpReq.status == 200 && xHttpReq.readyState === 4){
+        if( xHttpReq.readyState !== 4) return;
+	if ( xHttpReq.status == 200 ){
             console.log(xHttpReq.response);
             var response = JSON.parse(xHttpReq.response);
             console.log(response);
