@@ -1,4 +1,4 @@
-import { getSession } from "./utility/session";
+// import { getSession } from "./utility/session.js";
 
 function createLeague(){
     const leagueID = null;
