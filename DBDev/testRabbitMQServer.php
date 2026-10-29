@@ -52,7 +52,7 @@ function doLogin($username,$password)
     $stmt->bind_param('is', $user['userid'], $sessionHash);
     $stmt->execute();
 
-    return array("returnCode" => 1, "message" => "Login successful", "sessionId" => $sessionKey);
+    return array("returnCode" => 1, "message" => "Login successful", "sessionId" => $sessionKey, "userID" => $user['userid']);
 
 }
 
@@ -125,7 +125,7 @@ function getPlayer($playerID){
 
 
   
-  var_dump($res);
+  // var_dump($res);
   if(is_null($res)){
     return array("returnCode" => 0, "message" => "Player does not exist");
   }
@@ -153,7 +153,29 @@ function addGame($playerID, $gameID, $teamSlug, $goals, $assists, $points, $tota
     // echo($stmt);
   $stmt->execute();
 
-  return array("returnCode" => 0, "message" => "Failed to Update :(");
+  return array("returnCode" => 0, "message" => "Failed to Add :(");
+}
+
+function newLeague($userID) {
+  global $sidequestDB;
+
+  $stmt = $sidequestDB->prepare("INSERT INTO ___ (leagueID,userid,isAdmin) VALUES (?, ?, ?);"); // TODO: Query should be fixed
+  $stmt->bind_param('iii', , $userID, 1);
+    // echo($stmt);
+  $stmt->execute();
+
+  return array("returnCode" => 0, "message" => "Failed to Create :(");
+}
+
+function joinLeague($leagueID, $userID) {
+  global $sidequestDB;
+
+  $stmt = $sidequestDB->prepare("INSERT INTO ___ (leagueID,userid,isAdmin) VALUES (?, ?, ?);"); // TODO: Query should be fixed
+  $stmt->bind_param('iii', $leagueID, $userID, 1);
+    // echo($stmt);
+  $stmt->execute();
+
+  return array("returnCode" => 0, "message" => "Failed to Create :(");
 }
 
 function requestProcessor($request)
@@ -178,6 +200,8 @@ function requestProcessor($request)
       return addPlayerStats($request['playerID'], $request['firstName'], $request['lastName'], $request['jerseyNum'], $request['headshot'], $request['height'], $request['weight'], $request['birthday'], $request['position'], $request['teamSlug'], $request['isInjured'], $request['injuryReturnDate']); //TODO: Should be filled in
     case "get_player":
       return getPlayer($request['playerID']);
+    case "newLeague":
+      return createLeague();
   }
   return array("returnCode" => '0', 'message'=>"Server received request and processed");
 }
