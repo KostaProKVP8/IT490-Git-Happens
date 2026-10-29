@@ -142,6 +142,7 @@ function addPlayerStats(){
   $stmt->execute();
 
   return array("returnCode" => 0, "message" => "Failed to Update :(");
+  //THIS IS A COMMENT SO I CAN PUSH THE FILE AGAIN?!?!?!?!?!?!?!?!!?
 }
 
 function addGame($gameid){
