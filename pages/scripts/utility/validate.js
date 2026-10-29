@@ -1,10 +1,11 @@
 import { clearSession, getSession } from "./session.js";
 
 async function checkToken(){
-    var sessionId = getSession();
-    if (!sessionId){
-        window.location.replace("../../error.html");
-    } 
+    var sessionId = sessionStorage.getItem("sessionId");
+    console.log(sessionId);
+    // if (!sessionId){
+    //     window.location.replace("../../error.html");
+    // } 
 
     var xHttpReq = new XMLHttpRequest();
 
