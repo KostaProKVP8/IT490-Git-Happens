@@ -117,8 +117,8 @@ function doValidate($sessionKey)
 }
 
 function getPlayer($playerID){
-  global $dataDB;
-  $stmt = $dataDB->prepare("SELECT * FROM players WHERE player_id = ?;"); // TODO: fix query
+  global $sidequestDB;
+  $stmt = $sidequestDB->prepare("SELECT * FROM players WHERE playerID = ?;"); // TODO: Query should be fixed
   $stmt->bind_param('s', $playerID);
   $stmt->execute();
   $res = $stmt->get_result()->fetch_assoc();
@@ -133,11 +133,11 @@ function getPlayer($playerID){
   return array("returnCode" => 0, "message" => "Failed to get player :(");
 }
 
-function addPlayerStats(){
-  global $dataDB;
+function addPlayerStats($playerID, $firstName, $lastName, $jerseyNum, $headshot, $height, $weight, $birthday, $position, $isInjured, $injuryReturnDate) {
+  global $sidequestDB;
 
-  $stmt = $authenticationDB->prepare("INSERT INTO player_stats (username, email, password_hash) VALUES (?, ?, ?);"); // TODO: Fix query
-  $stmt->bind_param('sss', $username, $email, $password_hash);
+  $stmt = $sidequestDB->prepare("INSERT INTO players (playerID, firstName, lastName, jerseyNum, headshot, height, weight, birthday, position, teamSlug, isInjured, injuryReturnDate) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);"); // TODO: Query should be fixed
+  $stmt->bind_param('issisiisssis', $playerID, $firstName, $lastName, $jerseyNum, $headshot, $height, $weight, $birthday, $position, $isInjured, $injuryReturnDate);
     // echo($stmt);
   $stmt->execute();
 
@@ -145,11 +145,11 @@ function addPlayerStats(){
   //THIS IS A COMMENT SO I CAN PUSH THE FILE AGAIN?!?!?!?!?!?!?!?!!?
 }
 
-function addGame($gameid){
-  global $dataDB;
+function addGame($playerID, $gameID, $teamSlug, $goals, $assists, $points, $totalShots, $gameWinner, $penaltyMins, $OTGoals, $icetime) {
+  global $sidequestDB;
 
-  $stmt = $authenticationDB->prepare("INSERT INTO games (username, email, password_hash) VALUES (?, ?, ?);"); // TODO: Fix query
-  $stmt->bind_param('sss', $username, $email, $password_hash);
+  $stmt = $sidequestDB->prepare("INSERT INTO stats (playerID, gameID, teamSlug, goals, assists, points, totalShots, gameWinner, penaltyMins, OTGoals, icetime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);"); // TODO: Query should be fixed
+  $stmt->bind_param('iisiiiiiiis', $playerId, $gameID, $teamSlug, $goals, $assists, $points, $totalShots, $gameWinner, $penaltyMins, $OTGoals, $icetime);
     // echo($stmt);
   $stmt->execute();
 
@@ -173,11 +173,11 @@ function requestProcessor($request)
     case "validate_session":
       return doValidate($request['sessionId']);
     case "new_game":
-      return addGame($request[]); //TODO: FILL IN 
+      return addGame($request['playerID'], $request['gameID'], $request['teamSlug'], $request['goals'], $request['assists'], $request['points'], $request['totalShots'], $request['gameWinner'], $request['penaltyMins'], $request['OTGoals'], $request['icetime']); //TODO: Should be filled in 
     case "update_player":
-      return addPlayerStats($request[]); //TODO: FILL IN
+      return addPlayerStats($request['playerID'], $request['firstName'], $request['lastName'], $request['jerseyNum'], $request['headshot'], $request['height'], $request['weight'], $request['birthday'], $request['position'], $request['teamSlug'], $request['isInjured'], $request['injuryReturnDate']); //TODO: Should be filled in
     case "get_player":
-      return getPlayer($request["player_id"]);
+      return getPlayer($request['playerID']);
   }
   return array("returnCode" => '0', 'message'=>"Server received request and processed");
 }
