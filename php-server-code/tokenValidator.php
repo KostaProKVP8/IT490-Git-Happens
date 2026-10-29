@@ -1,5 +1,5 @@
 <?php
-    require_once 'database_functions.php'
+    require_once 'database_functions.php';
     function validateToken($token){
             global $db;
             // $query = "use authentication; select userid from users where username==$username and password_hash==$passwordHash;"; //ignored for now until rmq connection is set...
