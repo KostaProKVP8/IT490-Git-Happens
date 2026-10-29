@@ -203,7 +203,7 @@ function requestProcessor($request)
     case "newLeague":
       return newLeague($request['userID'],$request['leagueName']);
     case "joinLeague":
-      return joinLeague($request['userID'], $request['leagueID'], $request['leagueName']);
+      return joinLeague($request['leagueID'], $request['userID'], $request['leagueName']);
   }
   return array("returnCode" => '0', 'message'=>"Server received request and processed");
 }
