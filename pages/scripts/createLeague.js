@@ -27,7 +27,7 @@ function createLeague(){
             console.log("Error:", xHttpReq.status);
         }
     };
-    xHttpReq.send(`$userID=${encodeURI(userID)}&method=${encodeURIComponent("newLeague")}`);
+    xHttpReq.send(`userID=${encodeURI(userID)}&method=${encodeURIComponent("newLeague")}`);
 }
 
 const confirmButton = document.getElementById("createLeague");
