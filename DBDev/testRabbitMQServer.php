@@ -160,7 +160,7 @@ function newLeague($userID) {
   global $sidequestDB;
 
   $stmt = $sidequestDB->prepare("INSERT INTO ___ (leagueID,userid,isAdmin) VALUES (?, ?, ?);"); // TODO: Query should be fixed
-  $stmt->bind_param('iii', , $userID, 1);
+  $stmt->bind_param('iii', 0, $userID, 1);
     // echo($stmt);
   $stmt->execute();
 
@@ -171,7 +171,7 @@ function joinLeague($leagueID, $userID) {
   global $sidequestDB;
 
   $stmt = $sidequestDB->prepare("INSERT INTO ___ (leagueID,userid,isAdmin) VALUES (?, ?, ?);"); // TODO: Query should be fixed
-  $stmt->bind_param('iii', $leagueID, $userID, 1);
+  $stmt->bind_param('iii', $leagueID, $userID, 0);
     // echo($stmt);
   $stmt->execute();
 
