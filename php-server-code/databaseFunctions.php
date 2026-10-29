@@ -22,7 +22,7 @@ function query($query, $db, $type) {
             break;
 
         case "newLeague":
-            $request['leagueID'] = $query['leagueID'];
+            $request['userID'] = $query['userID'];
             break;
 
         case "login":

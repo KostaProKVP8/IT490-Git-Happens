@@ -32,6 +32,7 @@ async function login(){
             const response = JSON.parse(xHttpReq.response);
 	        console.log(response);
             if( response.returnCode == 1){
+                sessionStorage.setItem("userId", response.userid);
                 saveSession(response.sessionId);
                 console.log(getSession());
                 window.location.href = "../landing.html";

@@ -10,7 +10,7 @@
     }
     function createLeague($token){
         global $db;
-        $query = array("leagueID"=>$token);
+        $query = array("userID"=>$token);
         $response = query($query, $db, "newLeague");
 
         echo(json_encode($response));
@@ -19,8 +19,8 @@
         $token = $_POST["inviteID"]
         verifyLeague($token);
     }
-    if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["leagueID"]) && $_POST["method"]=="newLeague"){
-        $token = $_POST["leagueID"]
+    if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["userID"]) && $_POST["method"]=="newLeague"){
+        $token = $_POST["userID"]
         createLeague($token);
     }
 ?>
