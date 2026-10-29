@@ -35,7 +35,10 @@ async function login(){
                 sessionStorage.setItem("userId", response.userid);
                 saveSession(response.sessionId);
                 console.log(getSession());
-                window.location.href = "../landing.html";
+                if (parameters.has("inviteID")){
+                    sessionStorage.setItem("leagueId", parameters.get("inviteID"));
+                    window.location.href = "../landing.html";
+                }
             }
             else{
                 console.error(response);  

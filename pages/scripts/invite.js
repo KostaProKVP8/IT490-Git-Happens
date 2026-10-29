@@ -1,6 +1,11 @@
 const parameters = new URLSearchParams(window.location.search);
 
 if (parameters.has("inviteID")){
+    if(!sessionStorage.getItem("userID")){
+        window.location.href = `../login.html?inviteID=${parameters.get("inviteID")}`;
+    }
+
+
     var xHttpReq = new XMLHttpRequest();
     
     xHttpReq.open("POST","../../php-server-code/leagueVerify.php",true);
